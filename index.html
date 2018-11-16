@@ -8,13 +8,15 @@
         <title>Kevin Ivan</title>
     </head>
 
-    <!-- Hi George :) -->
-
     <body>
+        <script>
+            document.body.classList.add('fade');
+        </script>
+
         <header role="banner">
             <nav class="navigation" role="navigation">
                 <span class="logo">
-                    <a class="menu-link" href="/">KEVIN IVAN</a>
+                    <a class="logo-link" href="/">KEVIN IVAN</a>
                 </span>
                 <ul class="menu">
                     <li class="menu-item">
@@ -57,20 +59,7 @@
             <a href="http://twitter.com">twitter</a>
         </footer>
 
-        <script>
-            const link = document.querySelector('.js-link')
-
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.body.classList.add('fade');
-
-                setTimeout(() => window.location = e.target.href, 2000)
-            })
-
-            document.addEventListener('DOMContentLoaded', () => document.body.classList.remove('fade'))
-        </script>
-
-        <script>console.log('jaa hur var det här då?')</script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
 

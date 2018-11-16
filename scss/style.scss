@@ -28,11 +28,15 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    text-transform: uppercase;
+    letter-spacing: .125em;
+}
+
 .navigation {
     position: relative;
     display: flex;
     align-items: center;
-    // height: 100%;
     margin: 0 auto;
     padding: 3vw 5vw;
     z-index: 5;
@@ -53,6 +57,11 @@ a {
     &--polar {
         color: white;
     }
+}
+
+.logo-link {
+    text-transform: uppercase;
+    letter-spacing: .125em;
 }
 
 .menu {
@@ -81,7 +90,8 @@ a {
     }
 }
 
-.menu-link {
+.menu-link,
+.logo-link {
     text-transform: uppercase;
     letter-spacing: .125em;
 }
