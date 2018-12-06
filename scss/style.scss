@@ -1,18 +1,18 @@
 @import '_colors.scss';
 @import '_polar.scss';
+@import '_shipify.scss';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('/fonts/ProximaNova-Reg-webfont.woff');
+    font-family: 'Proxima Nova', sans-serif;
+    src: url('/fonts/ProximaNova-Black.otf') format('opentype'),
+        url('/fonts/ProximaNova-Bold.otf') format('opentype'),
+        url('/fonts/ProximaNova-Regular.otf') format('opentype'),
+        url('/fonts/ProximaNova-Light.otf') format('opentype');
 }
 
 body {
-    max-width: 1600px;
-    min-height: 100%;
-    margin: 0 auto;
-
-    font-family: 'Proxima Nova', 'Lucida Sans', 'Lucida Grande', sans-serif;
+    font-family: 'Proxima Nova', 'Open Sans', sans-serif;
 
     opacity: 1;
     transition: 2s opacity;
@@ -24,13 +24,8 @@ body.fade {
 }
 
 a {
-    color: black;
+    color: $black;
     text-decoration: none;
-}
-
-h2 {
-    text-transform: uppercase;
-    letter-spacing: .125em;
 }
 
 .navigation {
@@ -94,12 +89,6 @@ h2 {
 .logo-link {
     text-transform: uppercase;
     letter-spacing: .125em;
-}
-
-section {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
 }
 
 .column {
