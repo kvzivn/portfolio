@@ -13,3 +13,58 @@ $blue-light: #c6e2e9;
 $polar-video: #8ab3d3;
 $color-green: #00FF00;
 $color-blue: #0000FF;
+
+.colors {
+    display: none;
+    margin-top: 50px;
+
+    @media (min-width: 1000px) {
+        display: flex;
+        margin-top: 16px;
+        margin-left: 25px;
+    }
+
+    &--mobile {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: 1000px) {
+            display: none;
+        }
+    }
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+
+    & + & {
+        margin-left: 25px;
+    }
+
+    &--teal {
+        background: $color-tealLight;
+    }
+
+    &--orange {
+        background: $color-orange;
+    }
+
+    &--black {
+        background: $color-black;
+    }
+
+    &--grey {
+        background: $color-grey;
+    }
+
+    &--greyLight {
+        background: $color-greyLight;
+    }
+
+    &--blueLight {
+        background: $color-blueLight;
+    }
+}

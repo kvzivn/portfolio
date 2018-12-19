@@ -1,6 +1,7 @@
 @import '_colors.scss';
 @import '_polar.scss';
 @import '_shipify.scss';
+@import '_intro.scss';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 @font-face {
@@ -11,16 +12,27 @@
         url('/fonts/ProximaNova-Light.otf') format('opentype');
 }
 
-body {
-    font-family: 'Proxima Nova', 'Open Sans', sans-serif;
-
-    opacity: 1;
-    transition: 2s opacity;
+html, body {
+    height: 100%;
 }
 
-body.fade {
-    opacity: 0;
-    transition: 2s opacity;
+body {
+    font-family: 'Proxima Nova', 'Open Sans', sans-serif;
+    font-weight: regular;
+    color: $black;
+}
+
+header {
+    padding: 0 1rem;
+}
+
+h1 {
+    font-size: 1.6em;
+    color: #fafafa;
+}
+
+h2 {
+    font-size: 2.25rem;
 }
 
 a {
@@ -28,12 +40,34 @@ a {
     text-decoration: none;
 }
 
+
+.button,
+button {
+    background-color: $color-teal;
+    color: white;
+    padding: 16px 22px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: .015em;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .navigation {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
-    padding: 3vw 5vw;
+    padding: 10vw 4vw 8vw;
+    max-width: 1200px;
     z-index: 5;
 
     &--polar {
@@ -45,29 +79,40 @@ a {
     }
 }
 
-.logo {
-    flex: 1;
-    font-size: 16px;
+.about-text {
+    margin-top: 180px;
+    max-width: 600px;
+    font-size: 32px;
+    line-height: 1.375;
 
     &--polar {
         color: white;
     }
+
+    @media (min-width: 1400px) {
+        max-width: 920px;
+        font-size: 48px;
+    }
 }
 
-.logo-link {
-    text-transform: uppercase;
-    letter-spacing: .125em;
+.about-link {
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .menu {
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .menu-item {
-    font-size: 12px;
     padding: 2px;
 
     & + & {
@@ -75,7 +120,8 @@ a {
     }
 
     &:hover {
-        box-shadow: inset 0 -1px 0 0 black;
+        box-shadow: inset 0 -2px 0 0 black;
+        padding-bottom: 25px;
     }
 
     .polar & {
@@ -85,30 +131,49 @@ a {
     }
 }
 
-.menu-link,
-.logo-link {
-    text-transform: uppercase;
-    letter-spacing: .125em;
+.menu-link{
+    padding: 30px 0;
+
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: .02em;
+
+    @media (min-width: 1400px) {
+        font-size: 28px;
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .column {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    min-height: 400px;
-    text-align: center;
-
-    // border: 1px solid #ccc;
 }
 
-.column-projectTitle {
-    font-size: 24px;
-    font-weight: 400;
+.project-first {
+    flex-direction: column;
+}
+
+.project-info {
+    display: none;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
     letter-spacing: .02em;
+    text-transform: uppercase;
 }
 
-.column-infoText {
+.project-headline {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.project-description {
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -116,18 +181,125 @@ a {
     text-transform: none;
     line-height: 1.8em;
     max-width: 300px;
+
+    font-family: 'Hoefler Text', serif;
 }
 
-.column-link {
-    font-size: 15px;
+.project-image {
+    width: 100%;
+    height: auto;
 }
 
-.column-previewImage {
-    max-width: 300px;
+.browser {
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+    max-width:  1000px;
+    height: 800px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    overflow: hidden;
+
+    & + & {
+        margin-top: 200px;
+    }
+
+    &:last-child {
+        margin-bottom: 300px;
+    }
+
+    &--project {
+        max-width: 660px;
+        height: auto;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    @media (min-width: 1000px) {
+        margin-top: 120px;
+
+        &--project {
+            margin-top: 0;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1200px;
+
+        &--project {
+            margin-top: 0;
+        }
+    }
 }
 
-.video {
-    // max-width: 800px;
+.browser-top {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 25px;
+    background-color: #d1dcdc;
+    border-radius: 15px 15px 0 0;
+
+    .browser--project & {
+        height: 48px;
+    }
+}
+
+.browser-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    .browser--project & {
+        width: 12px;
+        height: 12px;
+    }
+
+    & + & {
+        margin-left: 12px;
+    }
+
+    &--close {
+        background: #ff474c;
+    }
+
+    &--minimize {
+        background: #ffbc23;
+    }
+
+    &--zoom {
+        background: #03d54e;
+    }
+
+
+}
+
+.browser-content {
+    height: 780px;
+
+    &--signup,
+    &--products {
+        background: url('/img/signup_bg2.jpeg') no-repeat center center;
+        background-size: cover;
+    }
+
+    &--products {
+        overflow: hidden;
+    }
+
+    &--travelers {
+        padding-top: 140px;
+        background: url('/img/signup_bg2.jpeg') no-repeat center center;
+        background-size: cover;
+    }
+
+    &--shipify {
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
 }
 
 footer {

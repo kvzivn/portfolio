@@ -1,54 +1,13 @@
 @import '_colors.scss';
 
-html, body {
-    height: 100%;
-}
-
-body {
-    color: $black;
-    font-weight: regular;
-}
-
-header {
-    padding: 0 1rem;
-}
-
-h1 {
-    font-size: 1.6em;
-    color: #fafafa;
-}
-
-h2 {
-    font-size: 2.25rem;
-}
-
 .empty_logo {
     text-decoration: none;
     color: $black;
 }
 
-.button,
-button {
-    background-color: $color-teal;
-    color: white;
-    padding: 16px 22px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    letter-spacing: .015em;
-    text-decoration: none;
-
-    &:focus {
-        outline: none;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
-}
 
 .signup-body {
-    background: url('/img/signup_bg2.jpeg') no-repeat center center;
+    background: url('/img/shipify/signup_bg2.jpeg') no-repeat center center;
     background-size: cover;
     height: 900px;
 }
@@ -406,7 +365,7 @@ input[type="text"] {
 }
 
 .products-bodyClass {
-    background: url('/img/signup_bg2.jpeg') no-repeat center center fixed;
+    background: url('/img/shipify/signup_bg2.jpeg') no-repeat center center fixed;
     background-size: cover;
 
     h1 {
@@ -579,7 +538,7 @@ input[type="text"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    padding-top: 60px;
 
     @media (min-width: 1000px) {
         justify-content: flex-start;
@@ -770,75 +729,3 @@ input[type="text"] {
     letter-spacing: .015em;
 }
 
-.browser {
-    margin-top: 60px;
-    width: 100%;
-    height: 800px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-    overflow: hidden;
-
-    & + & {
-        margin-top: 200px;
-    }
-
-    &:last-child {
-        margin-bottom: 300px;
-    }
-
-    @media (min-width: 1000px) {
-        margin-top: 120px;
-    }
-}
-
-.browser-top {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    padding-left: 25px;
-    background-color: #d1dcdc;
-    border-radius: 15px 15px 0 0;
-}
-
-.browser-btn {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-
-    & + & {
-        margin-left: 12px;
-    }
-
-    &--close {
-        background: #ff474c;
-    }
-
-    &--minimize {
-        background: #ffbc23;
-    }
-
-    &--zoom {
-        background: #03d54e;
-    }
-
-
-}
-
-.browser-content {
-    height: 780px;
-
-    &--signup,
-    &--products {
-        background: url('/img/signup_bg2.jpeg') no-repeat center center;
-        background-size: cover;
-    }
-
-    &--products {
-        overflow: hidden;
-    }
-
-    &--travelers {
-        padding-top: 140px;
-        background: url('/img/signup_bg2.jpeg') no-repeat center center;
-        background-size: cover;
-    }
-}

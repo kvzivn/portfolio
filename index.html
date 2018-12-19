@@ -8,43 +8,84 @@
         <title>Kevin Ivan</title>
     </head>
 
-    <body>
-        <script>
-            document.body.classList.add('fade');
-        </script>
-
+    <body class="has-animations">
         <header role="banner">
             <nav class="navigation" role="navigation">
-                <span class="logo">
-                    <a class="logo-link" href="/">KEVIN IVAN</a>
+                <span class="about-text">
+                     Kevin Ivan is a front-end developer with a postgrad in UX design. You can find some of his code on <a class="about-link" href="/kevin_ivan_cv.pdf">GitHub</a> and <a class="about-link" href="/kevin_ivan_cv.pdf">Codepen.</a>
                 </span>
                 <ul class="menu">
                     <li class="menu-item">
-                        <a class="menu-link" href="/index.html">Work</a>
+                        <a class="menu-link" href="/index.html">work</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" href="/about.html">About</a>
+                        <a class="menu-link" href="/about.html">about</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link" href="/contact.html">Contact</a>
+                        <a class="menu-link" href="/contact.html">contact</a>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <main role="main">
+            <section class="project-first">
+                <div class="column">
+                    <div class="browser browser--project">
+                        <div class="browser-top">
+                            <span class="browser-btn browser-btn--close"></span>
+                            <span class="browser-btn browser-btn--minimize"></span>
+                            <span class="browser-btn browser-btn--zoom"></span>
+                        </div>
+                        <div class="browser-content browser-content--shipify">
+                            <img class="project-image" src="/img/shipify/shipify.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="project-info">
+                        <h2 class="project-title">Shipify</a>
+
+                            <h3 class="project-headline">How can we help small businesses to ship products all to the global market?</h3>
+
+                            <p class="project-description">A volunteer signup site that scheduled ~30,000 shifts during the final weeks of the
+                                campaign.
+                            </p>
+
+                            <p class="project-role">UX research &amp; product design</p>
+
+                            <a class="column-link js-link" href="/shipify.html">View Project →</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="column">
+
+                    <div class="browser browser--project">
+                        <div class="browser-top">
+                            <span class="browser-btn browser-btn--close"></span>
+                            <span class="browser-btn browser-btn--minimize"></span>
+                            <span class="browser-btn browser-btn--zoom"></span>
+                        </div>
+                        <div class="browser-content browser-content--shipify">
+                            <video class="_3uUIF" src="/img/polar_vid.mp4" poster="https://oakwoodsite.cdn.prismic.io/oakwoodsite/cac3b7693d5fe785c5112647912cb84025f3b09c_polar_videofallback.jpg"
+                                autoplay="" loop="" muted="" preload="auto" playsinline="">
+                            </video>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column">
+                    <!-- <img class="column-previewImage" src="/img/polar/polar_logo.jpg" alt="project polar"> -->
+                    <h2>image</h2>
+                </div>
+            </section>
             <section>
                 <div class="column">
                     <h2 class="column-projectTitle">Fjällräven Polar</a>
                     <p class="column-infoText">A local food app that connects backyard gardeners and food enthusiasts who want to buy, sell, or share their extra produce.</p>
-                    <a class="column-link js-link" href="/polar.html">View Project →</a>
-                </div>
-                <div class="column">
-                    <img class="column-previewImage" src="/img/polar/polar_logo.jpg" alt="">
-                </div>
-            </section>
-            <section>
-                <div class="column">preview</div>
+                    <a class="column-link js-link" href="/polar.html">View Project →</a></div>
                 <div class="column">project info</div>
             </section>
             <section>
@@ -59,6 +100,7 @@
             <a href="http://twitter.com">twitter</a>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
         <script src="/js/main.js"></script>
     </body>
 </html>
