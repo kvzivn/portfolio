@@ -11,8 +11,35 @@
             origin: 'top'
         })
 
-        sr.reveal('.about-text', {
+        sr.reveal('.bio-text', {
             delay: 1200,
+            duration: 1200,
+            distance: '60px',
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            origin: 'bottom',
+            interval: 150
+        })
+
+        sr.reveal('.first', {
+            delay: 1200,
+            duration: 1200,
+            distance: '60px',
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            origin: 'bottom',
+            interval: 150
+        })
+
+        sr.reveal('.second', {
+            delay: 1600,
+            duration: 1200,
+            distance: '60px',
+            easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+            origin: 'bottom',
+            interval: 150
+        })
+
+        sr.reveal('.third', {
+            delay: 2000,
             duration: 1200,
             distance: '60px',
             easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',

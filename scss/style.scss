@@ -5,11 +5,11 @@
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 @font-face {
-    font-family: 'Proxima Nova', sans-serif;
-    src: url('/fonts/ProximaNova-Black.otf') format('opentype'),
-        url('/fonts/ProximaNova-Bold.otf') format('opentype'),
-        url('/fonts/ProximaNova-Regular.otf') format('opentype'),
-        url('/fonts/ProximaNova-Light.otf') format('opentype');
+    font-family: 'CarreNoir';
+    src: url('/fonts/CarreNoirStd-Medium.otf') format('opentype'),
+        url('/fonts/CarreNoirStd-Bold.otf') format('opentype'),
+        url('/fonts/CarreNoirStd-Light.otf') format('opentype'),
+        url('/fonts/CarreNoirStd-Demi.otf') format('opentype');
 }
 
 html, body {
@@ -17,8 +17,8 @@ html, body {
 }
 
 body {
-    font-family: 'Proxima Nova', 'Open Sans', sans-serif;
-    font-weight: regular;
+    font-family: 'CarreNoir', sans-serif;
+    font-weight: 400;
     color: $black;
 }
 
@@ -40,6 +40,10 @@ a {
     text-decoration: none;
 }
 
+.wrapper {
+    max-width: 71%;
+    margin-top: 8vw;
+}
 
 .button,
 button {
@@ -64,9 +68,9 @@ button {
 .navigation {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-end;
     margin: 0 auto;
-    padding: 10vw 4vw 8vw;
     max-width: 1200px;
     z-index: 5;
 
@@ -79,8 +83,61 @@ button {
     }
 }
 
-.about-text {
-    margin-top: 180px;
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline;
+    padding: 2px;
+
+    & + & {
+        margin-left: 30px;
+    }
+
+    .polar & {
+        &:hover {
+            box-shadow: inset 0 -1px 0 0 white;
+        }
+    }
+}
+
+.menu-item--about:hover ~ hr {
+    margin-left: 128px;
+}
+
+hr {
+    height: 4px;
+    width: 60px;
+    margin-top: 0;
+    margin-left: 11px;
+    background: $color-black;;
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+.menu-link{
+    display: inline-block;
+    text-align: center;
+    padding: 15px 15px 8px;
+
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: .02em;
+
+    @media (min-width: 1400px) {
+        font-size: 28px;
+    }
+}
+
+.about {
+
+}
+
+.bio-text {
+    margin-top: 120px;
     max-width: 600px;
     font-size: 32px;
     line-height: 1.375;
@@ -95,6 +152,25 @@ button {
     }
 }
 
+.about-text {
+    max-width: 600px;
+    font-size: 32px;
+    line-height: 1.375;
+
+    &--polar {
+        color: white;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 920px;
+        font-size: 48px;
+    }
+}
+
+.about-paragraph {
+    font-size: 28px;
+}
+
 .about-link {
     font-weight: 700;
 
@@ -103,45 +179,6 @@ button {
     }
 }
 
-.menu {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-item {
-    padding: 2px;
-
-    & + & {
-        margin-left: 30px;
-    }
-
-    &:hover {
-        box-shadow: inset 0 -2px 0 0 black;
-        padding-bottom: 25px;
-    }
-
-    .polar & {
-        &:hover {
-            box-shadow: inset 0 -1px 0 0 white;
-        }
-    }
-}
-
-.menu-link{
-    padding: 30px 0;
-
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: .02em;
-
-    @media (min-width: 1400px) {
-        font-size: 28px;
-    }
-}
 
 section {
     display: flex;
@@ -154,6 +191,7 @@ section {
 }
 
 .project-first {
+    margin-top: 160px;
     flex-direction: column;
 }
 
