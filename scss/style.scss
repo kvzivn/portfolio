@@ -65,7 +65,7 @@ button {
     z-index: 5;
 
     &--polar {
-        background: $polar-video;
+        background: $polar-blue;
 
         .menu-link {
             color: white;
@@ -167,9 +167,19 @@ button {
 }
 
 .project {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &--first {
         margin-top: 160px;
-        flex-direction: column;
+        background-color: $spinnup-yellow;
+    }
+
+    &--second {
+        background-color: $polar-blueLight;
     }
 
     & + & {
@@ -177,15 +187,11 @@ button {
     }
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-    will-change: transform;
-    transition: transform .25s ease-in-out;
+.project-logo {
+    width: 260px;
 
-    &:hover {
-        // transform: scale3d(1.05, 1.1, 1.1);
-        transform: scale(1.02);
+    &--polar {
+        width: 240px;
     }
 }
 
