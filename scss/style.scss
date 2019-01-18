@@ -26,7 +26,7 @@ html, body {
 }
 
 body {
-    font-family: 'CarreNoir', sans-serif;
+    font-family: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
     color: $color-black;
     letter-spacing: .022em;
     line-height: 1.4;
@@ -50,7 +50,12 @@ p {
 }
 
 h3 {
+    margin: 0;
     font-size: 32px;
+}
+
+.home {
+    font-family: 'CarreNoir', serif;
 }
 
 .wrapper {

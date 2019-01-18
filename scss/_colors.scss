@@ -13,7 +13,9 @@ $blue-light: #c6e2e9;
 $gg-green: #003928;
 
 $polar-blue: #8cb3d2;
+$polar-blueDark: #3b6c94;
 $polar-blueLight: #d7e3ec;
+$polar-orange: #f7941d;
 
 $spinnup-yellow: #f3d844;
 $spinnup-pink: #e93877;
@@ -26,7 +28,7 @@ $spinnup-grey: #f0f0f0;
 
     @media (min-width: 1000px) {
         display: flex;
-        margin-top: 16px;
+        margin-top: 0;
         margin-left: 25px;
     }
 
@@ -84,5 +86,21 @@ $spinnup-grey: #f0f0f0;
 
     &--spinnupYellow {
         background: $spinnup-yellow;
+    }
+
+    &--polarBlueDark {
+        background: $polar-blueDark;
+    }
+
+    &--polarBlueLight {
+        background: $polar-blueLight;
+    }
+
+    &--polarBlue {
+        background: $polar-blue;
+    }
+
+    &--polarOrange {
+        background: $polar-orange;
     }
 }

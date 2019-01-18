@@ -1,46 +1,30 @@
-.polar {
-    background: $polar-blue;
-}
-
 .polar-videoContainer {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-
-    @media (min-width: 800px) {
-        height: 100vh;
-    }
-}
-
-.polar-info {
-    color: white;
-    padding-top: 40px;
+    padding: 120px 0;
+    background-color: $polar-blue;
 }
 
 .polar-video {
     width: 65%;
 }
 
-.polar-logo {
-    margin: 100px 0 200px;
-    height: 200px;
+.polar-collage {
+    padding: 60px 0;
+    text-align: center;
 }
 
-.polar-logoSvg {
-    height: 100%;
-    width: 500px;
+.polar-collageImage {
+    max-width: 1000px;
 }
 
-.polar-kollage {
-    padding: 5% 10% 20%;
-}
-
-.polar-kollageImg {
-    object-fit: cover;
-    object-position: center;
-
-    width: 100%;
-    height: 100%;
+.polar-dogs,
+.polar-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
 }
