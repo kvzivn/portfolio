@@ -1,0 +1,39 @@
+.spinnup {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.spinnup-laptop {
+    padding: 120px 0;
+    background-color: $spinnup-pinkLight;
+    text-align: center;
+}
+
+.spinnup-laptopImage {
+    max-width: 900px;
+}
+
+.spinnup-collage {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.spinnup-collageImage {
+    max-width: 1000px;
+}
+
+.spinnup-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.spinnup-chart {
+    padding: 120px 0;
+    background-color: $spinnup-grey;
+    text-align: center;
+}
+
+.spinnup-chartImage {
+    max-width: 1000px;
+}

@@ -17,6 +17,8 @@ $polar-blueLight: #d7e3ec;
 
 $spinnup-yellow: #f3d844;
 $spinnup-pink: #e93877;
+$spinnup-pinkLight: #fcf1f5;
+$spinnup-grey: #f0f0f0;
 
 .colors {
     display: none;
@@ -70,5 +72,17 @@ $spinnup-pink: #e93877;
 
     &--blueLight {
         background: $color-blueLight;
+    }
+
+    &--spinnupPink {
+        background: $spinnup-pink;
+    }
+
+    &--spinnupPinkLight {
+        background: $spinnup-pinkLight;
+    }
+
+    &--spinnupYellow {
+        background: $spinnup-yellow;
     }
 }

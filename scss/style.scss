@@ -2,6 +2,7 @@
 @import '_polar.scss';
 @import '_intro.scss';
 @import '_browser.scss';
+@import '_spinnup.scss';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 @font-face {
@@ -12,6 +13,14 @@
         url('/fonts/CarreNoirStd-Demi.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('/fonts/ProximaNova-Regular.otf') format('opentype'),
+        url('/fonts/ProximaNova-Semibold.otf') format('opentype'),
+        url('/fonts/ProximaNova-Bold.otf') format('opentype'),
+        url('/fonts/ProximaNova-Black.otf') format('opentype');
+}
+
 html, body {
     height: 100%;
 }
@@ -19,6 +28,11 @@ html, body {
 body {
     font-family: 'CarreNoir', sans-serif;
     color: $color-black;
+    letter-spacing: .022em;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -26,9 +40,26 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+
+}
+
+h3 {
+    font-size: 32px;
+}
+
 .wrapper {
     max-width: 75%;
     margin: 8vw auto;
+
+    &--project {
+        max-width: 85%;
+    }
 }
 
 .header {
@@ -221,6 +252,14 @@ button {
     font-style: normal;
     letter-spacing: .01em;
     line-height: 1.8em;
+}
+
+.column {
+    width: 400px;
+
+    & + & {
+        margin-left: 60px;
+    }
 }
 
 footer {
