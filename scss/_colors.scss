@@ -26,10 +26,18 @@ $spinnup-grey: #f0f0f0;
     display: none;
     margin-top: 50px;
 
-    @media (min-width: 1000px) {
+    @media (min-width: $m) {
         display: flex;
-        margin-top: 0;
-        margin-left: 25px;
+        margin-top: 4px;
+        margin-left: 20px;
+    }
+
+    @media (min-width: $l) {
+        margin-top: 8px;
+    }
+
+    @media (min-width: $xl) {
+        margin-top: 8px;
     }
 
     &--mobile {
@@ -49,7 +57,22 @@ $spinnup-grey: #f0f0f0;
     box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
 
     & + & {
-        margin-left: 25px;
+        margin-left: 20px;
+    }
+
+    @media (min-width: $s) {
+        width: 36px;
+        height: 36px;
+    }
+
+    @media (min-width: $m) {
+        width: 26px;
+        height: 26px;
+    }
+
+    @media (min-width: $l) {
+        width: 36px;
+        height: 36px;
     }
 
     &--teal {

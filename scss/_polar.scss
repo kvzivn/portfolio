@@ -13,12 +13,16 @@
 }
 
 .polar-collage {
-    padding: 60px 0;
+    padding: 180px 0;
     text-align: center;
 }
 
 .polar-collageImage {
     max-width: 1000px;
+
+    @media (min-width: $xl) {
+        max-width: 1600px;
+    }
 }
 
 .polar-dogs,
@@ -27,4 +31,8 @@
     justify-content: center;
     align-items: center;
     padding: 120px 0;
+
+    @media (min-width: $xl) {
+        padding: 260px 0;
+    }
 }

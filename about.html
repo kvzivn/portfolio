@@ -11,34 +11,37 @@
 
 <body class="has-animations">
     <div class="wrapper">
-            <header role="banner">
-                <nav class="navigation" role="navigation">
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a class="menu-link" href="/index.html">work</a>
-                        </li>
-                        <li class="menu-item menu-item--about">
-                            <a class="menu-link" href="/about.html">about</a>
-                        </li>
-                        <hr />
-                    </ul>
-                </nav>
-            </header>
+        <header class="header" role="banner">
+            <nav class="navigation js-nav" role="navigation">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a class="menu-link js-workLink" href="#">work</a>
+                    </li>
+                    <li class="menu-item menu-item--about">
+                        <a class="menu-link js-aboutLink" href="#">about</a>
+                    </li>
+                    <hr class="menu-underline" />
+                </ul>
+            </nav>
+        </header>
 
         <main>
-            <div class="about about-text">
-                <p class="about-paragraph">
-                    Tell me something about you (your background, your personality, your sense of humor) that I won’t be able to find on Linkedin. Or in another designer.
-                </p>
-                <p class="about-paragraph first">
-                    I love to get inside the mind of people, discover their motivations, and use that information to design pleasant and accessible
-                    experiences.
-                </p>
-                <p class="about-paragraph third">
-                    I can confidently lead ideation sessions, conduct user interviews, identify crucial insights, and develop everything from
-                    low-fidelity prototypes to production quality code.
-                </p>
-            </div>
+            <section class="about about-text">
+                <img class="about-img" src="/img/kevin.jpg" alt="Kevin Ivan">
+                <div class="column">
+                    <p class="about-paragraph first">
+                        I love to get inside the mind of people, discover their motivations, and use that knowledge to design pleasant and accessible
+                        experiences.
+                    </p>
+                    <p class="about-paragraph first">
+                         I'm also into really cool stuff like biohacking and yoga.
+                    </p>
+                    <p class="about-paragraph third">
+                        I can confidently lead ideation sessions, conduct user research, and develop everything from
+                        low-fidelity prototypes to production quality code.
+                    </p>
+                </div>
+            </section>
         </main>
 
         <footer>

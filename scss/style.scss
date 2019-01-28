@@ -1,3 +1,4 @@
+@import '_mediaqueries.scss';
 @import '_colors.scss';
 @import '_polar.scss';
 @import '_intro.scss';
@@ -26,13 +27,21 @@ html, body {
 }
 
 body {
-    font-family: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
+    font-family: 'CarreNoir', Georgia, serif;
     color: $color-black;
     letter-spacing: .022em;
     line-height: 1.4;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @media (min-width: $m) {
+        font-size: 21px;
+    }
+
+    @media (min-width: $xxl) {
+        font-size: 32px;
+    }
 }
 
 a {
@@ -50,12 +59,13 @@ p {
 }
 
 h3 {
+    font-family: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
     margin: 0;
     font-size: 32px;
 }
 
 .home {
-    font-family: 'CarreNoir', serif;
+    // font-family: 'CarreNoir', serif
 }
 
 .wrapper {
@@ -65,10 +75,30 @@ h3 {
     &--project {
         max-width: 85%;
     }
+
+    @media (min-width: $s) {
+        max-width: 45%;
+    }
+
+    @media (min-width: $m) {
+        max-width: 68%;
+    }
+
+    @media (min-width: $l) {
+        max-width: 68%;
+    }
+
+    @media (min-width: $xxl) {
+        max-width: 50%;
+    }
 }
 
 .header {
     padding: 0 1rem;
+
+    @media (min-width: 1200px) {
+        padding: 0;
+    }
 }
 
 .button,
@@ -95,7 +125,7 @@ button {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
     z-index: 5;
@@ -106,6 +136,14 @@ button {
         .menu-link {
             color: white;
         }
+    }
+
+    @media (min-width: $s) {
+        justify-content: flex-end;
+    }
+
+    @media (min-width: $xl) {
+        max-width: none;
     }
 }
 
@@ -130,7 +168,11 @@ button {
     }
 
     &--about:hover ~ hr {
-        margin-left: 128px;
+        margin-left: 148px;
+    }
+
+    &--work:hover ~ hr {
+        margin-left: 0;
     }
 }
 
@@ -143,6 +185,10 @@ button {
     border: none;
     transition: margin-left 325ms ease-in-out;
     border-radius: 2px;
+
+    @media (min-width: 1200px) {
+        width: 68px;
+    }
 }
 
 .menu-link{
@@ -162,21 +208,59 @@ button {
 .bio-text {
     margin-top: 110px;
     max-width: 600px;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.375;
+    text-align: center;
 
     &--polar {
         color: white;
     }
 
-    @media (min-width: 1400px) {
+    @media (min-width: $xxs) {
+        font-size: 22px;
+    }
+
+    @media (min-width: $s) {
+        max-width: 800px;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    @media (min-width: $l) {
+        max-width: 800px;
+        font-size: 32px;
+    }
+
+    @media (min-width: $xl) {
         max-width: 920px;
-        font-size: 48px;
+        font-size: 38px;
+    }
+
+    @media (min-width: $xxl) {
+        max-width: 920px;
+        font-size: 42px;
+    }
+}
+
+.about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-top: 120px;
+}
+
+.about-img {
+    width: 280px;
+    margin-right: 60px;
+
+    @media (min-width: $xl) {
+        width: 360px;
     }
 }
 
 .about-text {
-    max-width: 600px;
+    // max-width: 600px;
     font-size: 32px;
     line-height: 1.375;
 
@@ -184,14 +268,30 @@ button {
         color: white;
     }
 
-    @media (min-width: 1400px) {
-        max-width: 920px;
-        font-size: 48px;
+    @media (min-width: $xl) {
+        font-size: 32px;
     }
 }
 
 .about-paragraph {
-    font-size: 28px;
+    font-size: 18px;
+    margin: 0;
+
+    @media (min-width: $xs) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $m) {
+        font-size: 22px;
+    }
+
+    @media (min-width: $l) {
+        font-size: 32px;
+    }
+
+    & + & {
+        margin-top: 1em;
+    }
 }
 
 .about-link {
@@ -222,11 +322,27 @@ button {
     }
 
     &--polar {
-        background-color: $polar-blueLight;
+        background-color: #c0e4ff;
     }
 
     & + & {
         margin-top: 80px;
+    }
+
+    @media (min-width: $m) {
+        height: 500px;
+    }
+
+    @media (min-width: $l) {
+        height: 500px;
+
+        & + & {
+            margin-top: 160px;
+        }
+    }
+
+    @media (min-width: $xxl) {
+        height: 600px;
     }
 }
 
@@ -243,6 +359,26 @@ button {
 
     &--polar {
         width: 230px;
+    }
+
+    @media (min-width: $m) {
+        width: 400px;
+
+        &--polar {
+            width: 300px;
+        }
+    }
+
+    @media (min-width: $xl) {
+        width: 450px;
+
+        &--polar {
+            width: 320px;
+        }
+
+        &--gg {
+            width: 340px;
+        }
     }
 }
 
@@ -265,6 +401,19 @@ button {
     & + & {
         margin-left: 60px;
     }
+
+    @media (min-width: $xl) {
+        width: 500px;
+    }
+
+    @media (min-width: $xxl) {
+        width: 530px;
+
+        &--spinnup {
+            width: 500px;
+        }
+    }
+
 }
 
 footer {
@@ -275,5 +424,9 @@ footer {
 
     > * + * {
         margin-left: 30px;
+    }
+
+    @media (min-width: $m) {
+        margin: 10vw auto;
     }
 }

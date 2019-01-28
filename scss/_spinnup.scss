@@ -6,22 +6,21 @@
 
 .spinnup-laptopImage {
     max-width: 900px;
-}
 
-.spinnup-collage {
-    padding: 120px 0;
-    text-align: center;
-}
-
-.spinnup-collageImage {
-    max-width: 1000px;
+    @media (min-width: $m) {
+        max-width: 1160px;
+    }
 }
 
 .spinnup-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 120px;
+    padding: 120px 0;
+
+    @media (min-width: $m) {
+        padding: 160px 0;
+    }
 }
 
 .spinnup-chart {
@@ -31,5 +30,15 @@
 }
 
 .spinnup-chartImage {
+    max-width: 1000px;
+}
+
+
+.spinnup-collage {
+    padding: 200px 0 60px;
+    text-align: center;
+}
+
+.spinnup-collageImage {
     max-width: 1000px;
 }
