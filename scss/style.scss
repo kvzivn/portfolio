@@ -22,12 +22,15 @@
         url('/fonts/ProximaNova-Black.otf') format('opentype');
 }
 
+$serif: 'CarreNoir', Georgia, serif;
+$sans-serif: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
+
 html, body {
     height: 100%;
 }
 
 body {
-    font-family: 'CarreNoir', Georgia, serif;
+    font-family: $serif;
     color: $color-black;
     letter-spacing: .022em;
     line-height: 1.4;
@@ -59,13 +62,9 @@ p {
 }
 
 h3 {
-    font-family: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
+    font-family: $sans-serif;
     margin: 0;
     font-size: 32px;
-}
-
-.home {
-    // font-family: 'CarreNoir', serif
 }
 
 .wrapper {
@@ -82,6 +81,7 @@ h3 {
 
     @media (min-width: $m) {
         max-width: 68%;
+        margin: 4vw auto;
     }
 
     @media (min-width: $l) {
@@ -98,6 +98,46 @@ h3 {
 
     @media (min-width: 1200px) {
         padding: 0;
+    }
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-family: $sans-serif;
+
+    @media (min-width: 1000px) {
+        justify-content: flex-start;
+    }
+}
+
+.backArrow {
+    font-size: 22px;
+    padding-top: 2px;
+
+    @media (min-width: 1000px) {
+        font-size: 24px;
+    }
+}
+
+.backLink {
+    text-decoration: none;
+    color: $color-black;
+    margin-left: 8px;
+    font-size: 16px;
+
+    @media (min-width: $s) {
+        justify-content: flex-start;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media (min-width: $xl) {
+        font-size: 22px;
     }
 }
 
@@ -161,18 +201,12 @@ button {
         margin-left: 30px;
     }
 
-    .polar & {
-        &:hover {
-            box-shadow: inset 0 -1px 0 0 white;
-        }
-    }
-
-    &--about:hover ~ hr {
+    .about-page & ~ hr {
         margin-left: 148px;
-    }
 
-    &--work:hover ~ hr {
-        margin-left: 0;
+        @media (min-width: $m) {
+            margin-left: 130px;
+        }
     }
 }
 
@@ -186,7 +220,11 @@ button {
     transition: margin-left 325ms ease-in-out;
     border-radius: 2px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $m) {
+        width: 58px;
+    }
+
+    @media (min-width: $xl) {
         width: 68px;
     }
 }
@@ -248,11 +286,20 @@ button {
     justify-content: center;
 
     margin-top: 120px;
+
+    @media (min-width: $m) {
+        margin-top: 70px;
+    }
 }
 
 .about-img {
     width: 280px;
     margin-right: 60px;
+
+    @media (min-width: $m) {
+        width: 250px;
+        margin-right: 40px;
+    }
 
     @media (min-width: $xl) {
         width: 360px;
@@ -330,7 +377,7 @@ button {
     }
 
     @media (min-width: $m) {
-        height: 500px;
+        height: 400px;
     }
 
     @media (min-width: $l) {
@@ -362,10 +409,10 @@ button {
     }
 
     @media (min-width: $m) {
-        width: 400px;
+        width: 360px;
 
         &--polar {
-            width: 300px;
+            width: 280px;
         }
     }
 
@@ -402,6 +449,22 @@ button {
         margin-left: 60px;
     }
 
+    @media (min-width: $m) {
+        width: 390px;
+
+        &--polar {
+            width: 510px;
+        }
+
+        &--spinnup {
+            width: 480px;
+
+            & + & {
+                margin-left: 40px;
+            }
+        }
+    }
+
     @media (min-width: $xl) {
         width: 500px;
     }
@@ -413,7 +476,16 @@ button {
             width: 500px;
         }
     }
+}
 
+.site-link {
+    font-family: $sans-serif;
+    font-size: 15px;
+    // font-weight: 600;
+}
+
+.site-linkArrow {
+    margin-right: 6px;
 }
 
 footer {
@@ -427,6 +499,6 @@ footer {
     }
 
     @media (min-width: $m) {
-        margin: 10vw auto;
+        margin: 10vw auto 7vw;
     }
 }

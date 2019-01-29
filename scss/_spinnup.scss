@@ -8,6 +8,10 @@
     max-width: 900px;
 
     @media (min-width: $m) {
+        max-width: 1000px;
+    }
+
+    @media (min-width: $xl) {
         max-width: 1160px;
     }
 }

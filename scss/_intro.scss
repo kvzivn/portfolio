@@ -21,40 +21,6 @@
     }
 }
 
-.intro-backBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-
-    @media (min-width: 1000px) {
-        justify-content: flex-start;
-    }
-}
-
-.intro-backArrow {
-    font-size: 22px;
-    padding-top: 2px;
-
-    @media (min-width: 1000px) {
-        font-size: 24px;
-    }
-}
-
-.intro-backLink {
-    text-decoration: none;
-    color: $color-black;
-    margin-left: 8px;
-
-    @media (min-width: 1000px) {
-        justify-content: flex-start;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
 .intro-headingContainer {
     margin-top: 30px;
 
@@ -65,7 +31,7 @@
     @media (min-width: $m) {
         display: flex;
         align-items: center;
-        margin-top: 220px;
+        margin-top: 200px;
     }
 
     @media (min-width: $l) {
