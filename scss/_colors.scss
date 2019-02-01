@@ -11,6 +11,7 @@ $black: #37383d;
 $blue-light: #c6e2e9;
 
 $gg-green: #003928;
+$gg-greenLight: #2bb673;
 
 $polar-blue: #8cb3d2;
 $polar-blueDark: #3b6c94;
@@ -125,5 +126,13 @@ $spinnup-grey: #f0f0f0;
 
     &--polarOrange {
         background: $polar-orange;
+    }
+
+    &--ggGreenLight {
+        background: $gg-greenLight;
+    }
+
+    &--ggGreen {
+        background: $gg-green;
     }
 }

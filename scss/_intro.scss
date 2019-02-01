@@ -51,6 +51,10 @@
     font-weight: 800;
     text-align: center;
 
+    &--gg {
+        font-size: 43px
+    }
+
     @media (min-width: $m) {
         text-align: left;
     }
