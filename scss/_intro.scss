@@ -52,7 +52,7 @@
     text-align: center;
 
     &--gg {
-        font-size: 43px
+        font-size: 40px
     }
 
     @media (min-width: $m) {
@@ -95,6 +95,10 @@
 
         &--polar {
             max-width: 560px;
+        }
+
+        &--gg {
+            font-size: 26px;
         }
     }
 

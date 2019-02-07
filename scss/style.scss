@@ -1,9 +1,11 @@
 @import '_mediaqueries.scss';
 @import '_colors.scss';
+@import '_typography.scss';
 @import '_polar.scss';
 @import '_intro.scss';
 @import '_browser.scss';
 @import '_spinnup.scss';
+@import '_gg.scss';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 @font-face {
@@ -21,9 +23,6 @@
         url('/fonts/ProximaNova-Bold.otf') format('opentype'),
         url('/fonts/ProximaNova-Black.otf') format('opentype');
 }
-
-$serif: 'CarreNoir', Georgia, serif;
-$sans-serif: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
 
 html, body {
     height: 100%;
@@ -57,13 +56,12 @@ img {
     height: auto;
 }
 
-p {
-
+h3, h2 {
+    font-family: $sans-serif;
+    margin: 0;
 }
 
 h3 {
-    font-family: $sans-serif;
-    margin: 0;
     font-size: 32px;
 }
 
@@ -98,46 +96,6 @@ h3 {
 
     @media (min-width: 1200px) {
         padding: 0;
-    }
-}
-
-.backBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-family: $sans-serif;
-
-    @media (min-width: 1000px) {
-        justify-content: flex-start;
-    }
-}
-
-.backArrow {
-    font-size: 22px;
-    padding-top: 2px;
-
-    @media (min-width: 1000px) {
-        font-size: 24px;
-    }
-}
-
-.backLink {
-    text-decoration: none;
-    color: $color-black;
-    margin-left: 8px;
-    font-size: 16px;
-
-    @media (min-width: $s) {
-        justify-content: flex-start;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    @media (min-width: $xl) {
-        font-size: 22px;
     }
 }
 
@@ -288,7 +246,7 @@ button {
     margin-top: 120px;
 
     @media (min-width: $m) {
-        margin-top: 70px;
+        margin-top: 35px;
     }
 }
 
@@ -361,7 +319,7 @@ button {
     }
 
     &--gg {
-        background-color: $gg-green;
+        background-color: #bcf5e4;
     }
 
     &--spinnup {
@@ -450,7 +408,7 @@ button {
     }
 
     @media (min-width: $m) {
-        width: 390px;
+        width: 360px;
 
         &--polar {
             width: 510px;
@@ -478,14 +436,27 @@ button {
     }
 }
 
+.text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .site-link {
     font-family: $sans-serif;
     font-size: 15px;
-    // font-weight: 600;
 }
 
 .site-linkArrow {
     margin-right: 6px;
+}
+
+.fadeIn {
+    animation: enter 750ms ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.backLink {
+    font-size: 18px;
 }
 
 footer {
@@ -499,6 +470,66 @@ footer {
     }
 
     @media (min-width: $m) {
-        margin: 10vw auto 7vw;
+        margin: 5.2vw auto 4vw;
+    }
+}
+
+.footer-project {
+    > * + * {
+        margin-left: 160px;
+    }
+}
+
+.footer-img {
+    max-width: 32px;
+}
+
+
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: $sans-serif;
+}
+
+.footer-arrow {
+    font-size: 22px;
+
+    @media (min-width: 1000px) {
+        font-size: 28px;
+    }
+
+    margin: 0 8px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: $color-black;
+    // margin-left: 8px;
+    font-size: 16px;
+
+    // @media (min-width: $s) {
+    //     justify-content: flex-start;
+
+    //     &:hover {
+    //         text-decoration: underline;
+    //     }
+    // }
+
+    // @media (min-width: $xl) {
+    //     font-size: 22px;
+    // }
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

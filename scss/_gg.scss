@@ -1,0 +1,28 @@
+.gg section {
+    max-width: 600px;
+    margin: 60px auto;
+
+    @media (min-width: $m) {
+        max-width: 700px;
+    }
+
+    @media (min-width: $xl) {
+        max-width: 1160px;
+    }
+
+    &.browser {
+        margin: 120px auto 260px;
+    }
+
+    &--gg {
+        // margin: 0 auto 260px;
+    }
+}
+
+.gg-heading {
+    margin-top: 60px;
+}
+
+.gg-image {
+    margin-top: 60px;
+}

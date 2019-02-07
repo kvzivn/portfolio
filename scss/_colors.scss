@@ -10,8 +10,10 @@ $blue: #24dac6;
 $black: #37383d;
 $blue-light: #c6e2e9;
 
-$gg-green: #003928;
-$gg-greenLight: #2bb673;
+$gg-greenDark: #003827;
+$gg-green: #2ab571;
+$gg-greenLight: #bef4e4;
+$gg-cream: #f8f5eb;
 
 $polar-blue: #8cb3d2;
 $polar-blueDark: #3b6c94;
@@ -128,11 +130,19 @@ $spinnup-grey: #f0f0f0;
         background: $polar-orange;
     }
 
+    &--ggGreenDark {
+        background: $gg-greenDark;
+    }
+
     &--ggGreenLight {
         background: $gg-greenLight;
     }
 
     &--ggGreen {
         background: $gg-green;
+    }
+
+    &--ggCream {
+        background: $gg-cream;
     }
 }

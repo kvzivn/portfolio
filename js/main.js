@@ -3,11 +3,17 @@
     const aboutLink = document.querySelector('.js-aboutLink')
     const mainContent = document.querySelector('.js-content')
     const nav = document.querySelector('.js-nav')
+    const footer = document.querySelector('.js-footer')
 
     let workPage = `
         <p class="bio-text js-bio">
-                I’m a UX designer that loves to code.<br>Currently based in Toronto, CA.
+                I’m a UX designer that loves to code.<br>Currently based in Toronto.
         </p>
+        <section class="project project--gg js-projectThird">
+            <a class="project-link" href="/grocerygateway.html">
+                <img class="project-logo project-logo--gg" src="/img/gg/gg_logo.png" alt="grocery gateway">
+            </a>
+        </section>
 
         <section class="project project--spinnup js-projectFirst">
             <a class="project-link" href="/spinnup.html">
@@ -20,16 +26,10 @@
                 <img class="project-logo project-logo--polar" src="/img/polar/polar_logo.png" alt="polar">
             </a>
         </section>
-
-        <section class="project project--gg js-projectThird">
-            <a class="project-link" href="/gg">
-                <img class="project-logo project-logo--gg" src="/img/gg/gg_logo.png" alt="grocery gateway">
-            </a>
-        </section>
     `
 
     let aboutPage = `
-        <section class="about about-text">
+        <section class="about about-text js-about">
             <img class="about-img" src="/img/kevin.jpg" alt="Kevin Ivan">
             <div class="column">
                 <p class="about-paragraph first">
@@ -37,7 +37,7 @@
                     experiences.
                 </p>
                 <p class="about-paragraph first">
-                        I'm also into really cool stuff like biohacking and yoga.
+                        I'm also into really cool stuff like biohacking, yoga, and naps.
                 </p>
                 <p class="about-paragraph third">
                     I can confidently lead ideation sessions, conduct user research, and develop everything from
@@ -47,11 +47,6 @@
         </section>
     `
 
-    let routes = {
-        '/index.html': workPage,
-        '/about.html': aboutPage
-    }
-
     if (window.location.pathname === '/about.html') {
         nav.classList.add('about-page')
     }
@@ -59,39 +54,66 @@
     if (workLink) {
         workLink.addEventListener('click', (e) => {
             e.preventDefault()
-            onNavItemClick('/index.html')
+            console.log('workLink')
+
+            // if (mainContent.classList.contains('fadeIn')) {
+            //     mainContent.classList.remove('fadeIn')
+            // }
+
+            mainContent.innerHTML = workPage
+            mainContent.classList.toggle('fadeIn')
+            footer.classList.toggle('fadeIn')
 
             if (nav.classList.contains('about-page')) {
                 nav.classList.remove('about-page')
             }
+
+            // setTimeout(() => {
+            //     mainContent.classList.remove('fadeIn')
+            //     footer.classList.remove('fadeIn')
+            // }, 1500)
         })
     }
 
     if (aboutLink) {
         aboutLink.addEventListener('click', (e) => {
             e.preventDefault()
-            onNavItemClick('/about.html')
+            console.log('aboutLink')
+
+            mainContent.innerHTML = aboutPage
+            mainContent.classList.toggle('fadeIn')
+            footer.classList.toggle('fadeIn')
+
             nav.classList.add('about-page')
+
+            // setTimeout(() => {
+            //     mainContent.classList.remove('fadeIn')
+            //     footer.classList.remove('fadeIn')
+            // }, 1500)
         })
-    }
-
-    let onNavItemClick = (pathName) => {
-        window.history.pushState(
-            {},
-            pathName,
-            window.location.origin + pathName
-        )
-
-        mainContent.innerHTML = routes[pathName]
-    }
-
-    window.onpopstate = () => {
-        mainContent.innerHTML = window.location.pathname
     }
 
     if (document.body.classList.contains('has-animations')) {
 
         const sr = window.sr = ScrollReveal()
+
+        // sr.reveal('.js-content', {
+        //     delay: 1000,
+        //     duration: 1000,
+        //     distance: '40px',
+        //     easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+        //     origin: 'bottom',
+        //     interval: 150
+        // })
+
+        // sr.reveal('.js-footer', {
+        //     delay: 1000,
+        //     duration: 1000,
+        //     distance: '40px',
+        //     easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+        //     origin: 'bottom',
+        //     interval: 150
+        // })
 
         // sr.reveal('.js-heading', {
         //     delay: 800,
