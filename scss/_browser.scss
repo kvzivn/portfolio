@@ -8,42 +8,13 @@
     max-width:  1000px;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 
-    & + & {
-        margin-top: 200px;
-    }
-
-    &:last-child {
-        margin-bottom: 300px;
-    }
-
-    &--project {
-        max-width: 660px;
-        height: auto;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-    }
-
-    &--gg {
-        margin: 0 autp 260px;
-    }
-
     @media (min-width: $m) {
-        margin-top: 120px;
-
-        &--project {
-            margin-top: 0;
-        }
+        max-width: 800px;
+        margin: 0 auto 260px;
     }
 
     @media (min-width: $xl) {
         max-width: 1200px;
-
-        &--project {
-            margin-top: 0;
-        }
     }
 }
 
@@ -96,8 +67,6 @@
 }
 
 .browser-content {
-    // height: 780px;
-
     &--signup,
     &--products {
         background: url('/img/signup_bg2.jpeg') no-repeat center center;
