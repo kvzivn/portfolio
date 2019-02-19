@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <title>Kevin Ivan - Spinnup</title>
 </head>
 
 <body class="spinnup has-animations">
     <header class="intro">
         <div class="backBtn">
-            <span class="backArrow">&#8592;</span>
-            <a class="backLink" href="#" onclick="history.back(0)">Back to projects</a>
+            <a class="arrowLink" href="/">
+                <span class="arrowLink-arrow">&#8592;</span>Back to projects
+            </a>
         </div>
-        <div class="intro-headingContainer">
+        <div class="intro-headingContainer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <h1 class="intro-heading js-heading">Spinnup</h1>
             <div class="colors">
                 <div class="color color--spinnupPink"></div>
@@ -27,8 +30,8 @@
         </div>
 
         <div class="intro-infoContainer">
-            <h2 class="intro-subtitle js-subtitle">A digital service for emerging artists</h2>
-            <div class="colors colors--mobile">
+            <h2 class="intro-subtitle js-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">A digital service for emerging artists</h2>
+                <div class="colors colors--mobile">
                 <div class="color color--teal"></div>
                 <div class="color color--black"></div>
                 <div class="color color--blueLight"></div>
@@ -36,15 +39,15 @@
                 <div class="color color--grey"></div>
             </div>
             <ul class="intro-infoList">
-                <li class="intro-infoItem intro-infoItem--role">
+                <li class="intro-infoItem intro-infoItem--role" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1000">
                     <span class="intro-infoHeading">Role</span>
                     <span class="intro-infoData">Front-End Dev</span>
                 </li>
-                <li class="intro-infoItem intro-infoItem--category">
+                <li class="intro-infoItem intro-infoItem--category" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200">
                     <span class="intro-infoHeading">Category</span>
                     <span class="intro-infoData">Agency work</span>
                 </li>
-                <li class="intro-infoItem intro-infoItem--timeframe">
+                <li class="intro-infoItem intro-infoItem--timeframe" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1400">
                     <span class="intro-infoHeading">Client</span>
                     <span class="intro-infoData">Universal Music</span>
                 </li>
@@ -64,7 +67,7 @@
             <h3 class="js-textHeading">Discovering real talent</h3>
             <p class="js-paragraph">As most new artists self-publish through independent digital distribution services and on YouTube, the music industry is finding it increasingly difficult to discover and connect with fresh new talent.</p>
 
-            <p class="js-paragraph">To solve this dilemma, my team at Oakwood helped Universal Music to create an online platform for unsigned artists, called Spinnup. It's a digital distribution service on par with the leading competitors, with the added plus of being connected to Universal’s own talent scouts.</p>
+            <p class="js-paragraph">To solve this dilemma, my team at Oakwood helped Universal Music to create an online platform for unsigned artists, called <a class="link link--spinnup" href="https://spinnup.com/" target="_blank">Spinnup.</a> It's a digital distribution service on par with the leading competitors, with the added plus of being connected to Universal’s own talent scouts.</p>
         </div>
     </section>
 
@@ -76,18 +79,29 @@
         <img class="spinnup-collageImage" src="/img/spinnup/spinnup_collage.jpg" alt="spinnup">
     </section>
 
-    <footer class="footer-project">
-        <div class="footer-btn backBtn">
-            <span class="footer-arrow">&#8592;</span>
-            <a class="backLink" href="#" onclick="history.back(0)">Back to projects</a>
+    <section class="spinnup-stack">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="spinnup-stackLogos">
+            <img class="spinnup-stackLogo" src="/img/spinnup/react_logo.png" alt="react_logo">
+            <img class="spinnup-stackLogo spinnup-stackLogo--redux" src="/img/spinnup/redux_logo.png" alt="redux_logo">
+            <img class="spinnup-stackLogo spinnup-stackLogo--node" src="/img/spinnup/node_logo.png" alt="node_logo">
         </div>
-        <div class="footer-btn nextBtn">
-            <a class="nextLink" href="/polar.html">Next project</a>
-            <span class="footer-arrow">&#8594;</span>
+    </section>
+
+    <footer class="footer-project">
+        <div class="footer-backBtn">
+            <a class="arrowLink" href="#" onclick="history.back(0)">
+                <span class="arrowLink-arrow">&#8592;</span>Back to projects
+            </a>
+        </div>
+        <div class="footer-nextBtn">
+            <a class="arrowLink" href="/polar.html">
+                Next project<span class="arrowLink-arrow">&#8594;</span>
+            </a>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

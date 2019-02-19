@@ -27,6 +27,36 @@
     }
 }
 
+.spinnup-stack {
+    padding: 140px 0 100px;
+    text-align: center;
+}
+
+.spinnup-stackLogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+
+    > * + * {
+        margin-left: 100px;
+    }
+}
+
+.spinnup-stackLogo {
+    width: 340px;
+
+    &--redux {
+        width: 300px;
+        // margin-left: 100px;
+    }
+
+    &--node {
+        width: 240px;
+        // margin-left: 120px;
+    }
+}
+
 .spinnup-chart {
     padding: 120px 0;
     background-color: $spinnup-grey;
@@ -35,8 +65,11 @@
 
 .spinnup-chartImage {
     max-width: 1000px;
-}
 
+    @media (min-width: $xxl) {
+        max-width: 1260px;
+    }
+}
 
 .spinnup-collage {
     padding: 200px 0 60px;
@@ -45,4 +78,8 @@
 
 .spinnup-collageImage {
     max-width: 1000px;
+
+    @media (min-width: $xxl) {
+        max-width: 1200px;
+    }
 }
