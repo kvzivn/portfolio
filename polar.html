@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <title>Kevin Ivan - Polar</title>
 </head>
 
 <body class="polar">
     <header class="intro">
-        <div class="backBtn">
-            <span class="backArrow">&#8592;</span>
-            <a class="backLink" href="/">Back to projects</a>
+        <div class="intro-backBtn">
+            <a class="arrowLink" href="/">
+                <span class="arrowLink-arrow">&#8592;</span>Back to projects
+            </a>
         </div>
-        <div class="intro-headingContainer">
+        <div class="intro-headingContainer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <h1 class="intro-heading">Polar</h1>
             <div class="colors">
                 <div class="color color--polarBlueDark"></div>
@@ -27,24 +30,24 @@
         </div>
 
         <div class="intro-infoContainer">
-            <h2 class="intro-subtitle">An international expedition like no other</h2>
-            <div class="colors colors--mobile">
-                <div class="color color--teal"></div>
+            <h2 class="intro-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">An international expedition like no other</h2>
+            <div class="colors colors--mobile" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                <div class="color color--polarBlueDark"></div>
                 <div class="color color--black"></div>
-                <div class="color color--blueLight"></div>
+                <div class="color color--polarBlue"></div>
+                <div class="color color--polarBlueLight"></div>
                 <div class="color color--greyLight"></div>
-                <div class="color color--grey"></div>
             </div>
             <ul class="intro-infoList">
-                <li class="intro-infoItem intro-infoItem--role">
+                <li class="intro-infoItem intro-infoItem--role" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1000">
                     <span class="intro-infoHeading">Role</span>
                     <span class="intro-infoData">Front-End Dev</span>
                 </li>
-                <li class="intro-infoItem intro-infoItem--category">
+                <li class="intro-infoItem intro-infoItem--category" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200">
                     <span class="intro-infoHeading">Category</span>
                     <span class="intro-infoData">Agency work</span>
                 </li>
-                <li class="intro-infoItem intro-infoItem--timeframe">
+                <li class="intro-infoItem intro-infoItem--timeframe" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1400">
                     <span class="intro-infoHeading">Client</span>
                     <span class="intro-infoData">Fjällräven</span>
                 </li>
@@ -52,44 +55,67 @@
         </div>
     </header>
 
-    <section class="polar-videoContainer">
-        <video class="video polar-video" src="/img/polar/polar_vid.mp4" autoplay="on" loop="on" preload="auto" playsinline=""></video>
+    <section class="row polar-videoContainer">
+        <video class="polar-video" src="/img/polar/polar_vid.mp4" autoplay="on" loop="on" preload="auto" playsinline=""></video>
     </section>
 
-    <section class="polar-dogs">
-        <div class="column column--polar">
+    <section class="row polar-dogs columns">
+        <div class="column">
             <h3>A Hub for the Arctic Outdoors</h3>
-            <p>My team created both a competition site and a hub for outdoor winter activities. Visitors would return to marvel at survival guides and beautiful subarctic imagery. The talented designers I collaborated with granted the breathtaking scenery the space it deserved and together we crafted a user-friendly, personalizable competition.</p>
+            <p class="text">My team created both a competition site and a hub for outdoor winter activities. Visitors would return to marvel at survival guides and beautiful subarctic imagery. The talented designers I collaborated with granted the breathtaking scenery the space it deserved and together we crafted a user-friendly, personalizable competition.</p>
         </div>
-        <div class="column column--polar">
-            <img class="polar-dogsImage" src="/img/polar/dogs.jpg" alt="dogs">
+        <div class="column">
+            <img class="polar-dogsImage" src="/img/polar/dogs.jpg" alt="polar dogs">
         </div>
     </section>
 
-    <section class="polar-collage">
-        <img class="polar-collageImage" src="/img/polar/polar_collage2.jpg" alt="polar">
+    <section class="row polar-contestants">
+        <div class="browser">
+            <div class="browser-top">
+                <span class="browser-btn browser-btn--close"></span>
+                <span class="browser-btn browser-btn--minimize"></span>
+                <span class="browser-btn browser-btn--zoom"></span>
+            </div>
+            <div class="browser-content browser-content--contestants">
+                <img class="polar-contestantsImg" src="/img/polar/contestants.jpg" alt="screenshot of contestants">
+            </div>
+        </div>
     </section>
 
-    <section class="polar-map">
-        <div class="column column--polar">
-            <img class="polar-mapImage" src="/img/polar/polar_map2.jpg" alt="map">
+    <section class="row polar-collage">
+        <img class="polar-collageImage" src="/img/polar/polar_collage2.jpg" alt="polar collage">
+    </section>
+
+    <section class="row polar-map columns">
+        <div class="column">
+            <img class="polar-mapImage" src="/img/polar/polar_map2.jpg" alt="screenshot of map">
         </div>
-        <div class="column column--polar">
+        <div class="column">
             <h3>International Reach</h3>
-            <p>With 1,468 participants from 82 countries, this was a truly global event. Through the entries we followed a fantastic mix of people that were eager to venture into the Scandinavian wilderness. <br><br>Articles about the competition came in from all around the world – from the U.S. to Mongolia – with over 76 pieces from Vietnam alone.</p>
-            <!-- <a class="site-link" href="https://polar.fjallraven.com" target="_blank">
-                Launch the site
-                <span>&#8594;</span>
-            </a> -->
+            <p class="text">With 1,468 participants from 82 countries, this was a truly global event. Through the entries we followed a fantastic mix of people that were eager to venture into the Scandinavian wilderness.</p>
+            <p class="text">Articles about the competition came in from all around the world – from the U.S. to Mongolia – with over 76 pieces from Vietnam alone. You can visit the site <a class="link link--polar" href="https://polar.fjallraven.com" target="_blank">here.</a></p>
+
+        </div>
+    </section>
+
+    <section class="row polar-stack">
+        <h2 class="section-heading">Tech Stack</h2>
+        <div class="polar-stackLogos">
+            <img class="polar-stackLogo" src="/img/polar/wp_logo.png" alt="wordpress logo">
+            <img class="polar-stackLogo polar-stackLogo--js" src="/img/polar/js_logo.png" alt="javascript logo">
         </div>
     </section>
 
     <footer class="footer-project">
-        <div class="footer-btn backBtn">
-            <span class="footer-arrow">&#8592;</span>
-            <a class="backLink" href="/index.html">Back to projects</a>
+        <div class="footer-backBtn">
+            <a class="arrowLink" href="/">
+                <span class="arrowLink-arrow">&#8592;</span>Back to projects
+            </a>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -4,13 +4,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 60px auto;
-    max-width:  1000px;
+    margin: 0 auto;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 
     @media (min-width: $m) {
+        max-width: 700px;
+    }
+
+    @media (min-width: $l) {
         max-width: 800px;
-        margin: 0 auto 260px;
     }
 
     @media (min-width: $xl) {
@@ -100,4 +102,9 @@
     font-family: $sans-serif;
     font-size: 16px;
     text-align: center;
+
+    @media (min-width: $l) {
+        bottom: -80px;
+        font-size: 18px;
+    }
 }

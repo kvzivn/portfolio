@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <title>Kevin Ivan - Voice User Interface</title>
 </head>
 
-<body class="gg has-animations">
+<body class="vui">
     <header class="intro">
-        <div class="backBtn">
-            <span class="backArrow">&#8592;</span>
-            <a class="backLink" href="#" onclick="history.back(0)">Back to projects</a>
+        <div class="intro-backBtn">
+            <a class="arrowLink" href="/">
+                <span class="arrowLink-arrow">&#8592;</span>Back to projects
+            </a>
         </div>
-        <div class="intro-headingContainer">
-            <h1 class="intro-heading intro-heading--gg js-heading">Grocery Gateway</h1>
+        <div class="intro-headingContainer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <h1 class="intro-heading intro-heading--vui">Grocery Gateway</h1>
             <div class="colors">
                 <div class="color color--ggGreenDark"></div>
                 <div class="color color--ggGreen"></div>
@@ -25,8 +28,8 @@
         </div>
 
         <div class="intro-infoContainer">
-            <h2 class="intro-subtitle intro-subtitle--gg js-subtitle">Less hunting. More gathering.</h2>
-            <div class="colors colors--mobile">
+            <h2 class="intro-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Less hunting. More gathering.</h2>
+            <div class="colors colors--mobile" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                 <div class="color color--teal"></div>
                 <div class="color color--black"></div>
                 <div class="color color--blueLight"></div>
@@ -34,15 +37,15 @@
                 <div class="color color--grey"></div>
             </div>
             <ul class="intro-infoList">
-                <li class="intro-infoItem intro-infoItem--role">
+                <li class="intro-infoItem intro-infoItem--role" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1000">
                     <span class="intro-infoHeading">Role</span>
                     <span class="intro-infoData">UX/UI</span>
                 </li>
-                <li class="intro-infoItem intro-infoItem--category">
+                <li class="intro-infoItem intro-infoItem--category" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200">
                     <span class="intro-infoHeading">Category</span>
                     <span class="intro-infoData">Work placement</span>
                 </li>
-                <li class="intro-infoItem intro-infoItem--timeframe">
+                <li class="intro-infoItem intro-infoItem--timeframe" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1400">
                     <span class="intro-infoHeading">Client</span>
                     <span class="intro-infoData">Grocery Gateway</span>
                 </li>
@@ -62,95 +65,29 @@
         <div class="browser-caption">Grocery Gateway - An online food delivery service</div>
     </div>
 
-    <section class="text">
-        <h2 class="gg-heading">Introduction</h2>
-        <p class="gg-text">
+    <section class="row row--text">
+        <h3>Introduction</h2>
+        <p class="text">
             This project was a collaboration between my UX design program and the online grocery store Grocery Gateway. My team and I
-            went through the entire UX lifecycle which involved everything from user research and high-fidelity prototyping
-            to usability testing with eye-tracking technology. Our prototype along with our insights, findings, and recommendations
+            went through the entire UX lifecycle which involved everything from user research to high-fidelity prototyping. Our prototype along with our insights, findings, and recommendations
             were presented to Grocery Gateway’s UX design and strategy lead.
-
-        </p>
-
-        <h2 class="gg-heading">Challenge</h2>
-        <p class="gg-text">
-            Our project goal and challenge was to reimagine the “My Favourites” feature in a way that allowed users to shop in a more
-            efficient manner while exposing them to new products and moments of inspiration, leading to increased sales and
-            brand loyalty. “My Favourites” is a feature that keeps track of a users most purchased items.
-        </p>
-
-        <section class="gg-timeline">
-            <h2 class="gg-heading">Research Timeline</h2>
-            <img class="gg-image" src="/img/gg/gg_timeline.png" alt="gg">
-        </section>
-
-        <h2 class="gg-heading">User Interviews</h2>
-        <p class="gg-text">
-            We began our research phase by conducting formal user interviews. We did this to gain better insight into how existing users
-            use the Grocery Gateway website and more specifically how they use the “My Favorites” feature. I took on the
-            role as moderator and the rest of my team took notes and helped transcribe the interview.
-            <br><br> The interviews began with questions about online and physical grocery shopping habits and preferences.
-            Our participant was also told to complete 3 structured scenarios on the Grocery Gateway website emphasizing using
-            the “My Favorites” feature when building a cart, modifying it, and finally placing an order.
-
-        </p>
-
-        <h2 class="gg-heading">Analysis and Synthesis</h2>
-        <p class="gg-text">
-            To structure the data from the interviews we conducted a content analysis of our transcript. By highlighting and labeling
-            key phrases with predetermined codes, we gained a broader understanding of our participants mental model, their
-            frustrations, and their goals. Our key findings were then clustered into an Affinity Map. This gave us a good
-            overview of all the information we needed to start ideating and uncovering opportunities.
-        </p>
-        <img class="gg-image" src="/img/gg/gg_affinity.png" alt="gg">
-
-        <h2 class="gg-heading">Key Insights</h2>
-        <p class="gg-text">
-            <ul>
-                <li class="bullet">“My Favourites” was mainly used to make sure our participant didn’t forget anything before checking out.</li>
-                <li class="bullet">It was not completely clear how the “My Favorites” page worked. This was mainly due to the feature breaking
-                    a common design pattern by not allowing manually adding or removing products.</li>
-                <li class="bullet">Out of stock items were a major pain point and there was no way of viewing any alternative products.</li>
-                <li class="bullet">Vertical scrolling on the mobile app was tedious.</li>
-            </ul>
         </p>
     </section>
-
-    <section class="gg-customer">
-        <h2 class="gg-heading">Customer Journey Map</h2>
-        <p class="gg-text">
-            To be able to look at how our data was related to a full customer journey journey, we created a customer journey map. This
-            includes the start to finish process required to submit an order and details our user’s highlights and pain points
-            while following the process.
-        </p>
-        <img class="gg-image" src="/img/gg/gg_customer.png" alt="gg">
-    </section>
-
-    <section class="gg-prototype">
-        <h2 class="gg-heading">Prototype</h2>
-        <p class="gg-text">
-            To be able to look at how our data was related to a full customer journey journey, we created a customer journey map. This
-            includes the start to finish process required to submit an order and details our user’s highlights and pain points
-            while following the process.
-        </p>
-        <div class="gg-videoContainer">
-            <video class="video video--mobile" src="/img/gg/grid.mp4" autoplay="on" loop="on" preload="auto"></video>
-        </div>
-    </section>
-
-
 
     <footer class="footer-project">
-        <div class="footer-btn backBtn">
-            <span class="footer-arrow">&#8592;</span>
-            <a class="backLink" href="#" onclick="history.back(0)">Back to projects</a>
+        <div class="footer-backBtn">
+            <a class="arrowLink" href="/">
+                <span class="arrowLink-arrow">&#8592;</span>Back to projects
+            </a>
         </div>
-        <div class="footer-btn nextBtn">
-            <a class="nextLink" href="/polar.html">Next project</a>
-            <span class="footer-arrow">&#8594;</span>
+        <div class="footer-nextBtn">
+            <a class="arrowLink" href="/spinnup.html">
+                Next project<span class="arrowLink-arrow">&#8594;</span>
+            </a>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.5/scrollreveal.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

@@ -1,18 +1,23 @@
 .spinnup-laptop {
-    padding: 120px 0;
     background-color: $spinnup-pinkLight;
     text-align: center;
 }
 
 .spinnup-laptopImage {
     max-width: 900px;
+    padding: 60px 0;
+
+    @media (min-width: $s) {
+        padding: 0;
+    }
 
     @media (min-width: $m) {
         max-width: 1000px;
     }
 
-    @media (min-width: $xl) {
+    @media (min-width: $l) {
         max-width: 1160px;
+        padding: 160px 0;
     }
 }
 
@@ -20,15 +25,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 120px 0;
+    flex-direction: column;
 
     @media (min-width: $m) {
+        flex-direction: row;
+    }
+}
+
+.spinnup-chart {
+    background-color: $spinnup-grey;
+    text-align: center;
+
+    @media (min-width: $m) {
+        padding: 100px 0;
+    }
+}
+
+.spinnup-chartImage {
+    max-width: 1000px;
+    padding: 60px 0;
+
+    @media (min-width: $s) {
+        padding: 0;
+    }
+
+    @media (min-width: $l) {
+        max-width: 1260px;
         padding: 160px 0;
     }
 }
 
+.spinnup-collage {
+    text-align: center;
+}
+
+.spinnup-collageImage {
+    max-width: 1000px;
+
+    @media (min-width: $l) {
+        max-width: 1200px;
+    }
+}
+
 .spinnup-stack {
-    padding: 140px 0 100px;
     text-align: center;
 }
 
@@ -36,50 +75,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    margin: 30px auto 0;
 
     > * + * {
-        margin-left: 100px;
+        margin-left: 30px;
+    }
+
+    @media (min-width: $m) {
+        margin: 60px auto 0 -80px;
+
+        > * + * {
+            margin-left: 100px;
+        }
+    }
+
+    @media (min-width: $l) {
+        > * + * {
+            margin-left: 120px;
+        }
     }
 }
 
 .spinnup-stackLogo {
-    width: 340px;
+    width: 80px;
 
     &--redux {
-        width: 300px;
-        // margin-left: 100px;
+        width: 74px;
     }
 
     &--node {
+        width: 50px;
+    }
+
+    @media (min-width: $m) {
         width: 240px;
-        // margin-left: 120px;
-    }
-}
 
-.spinnup-chart {
-    padding: 120px 0;
-    background-color: $spinnup-grey;
-    text-align: center;
-}
+        &--redux {
+            width: 220px;
+        }
 
-.spinnup-chartImage {
-    max-width: 1000px;
-
-    @media (min-width: $xxl) {
-        max-width: 1260px;
-    }
-}
-
-.spinnup-collage {
-    padding: 200px 0 60px;
-    text-align: center;
-}
-
-.spinnup-collageImage {
-    max-width: 1000px;
-
-    @media (min-width: $xxl) {
-        max-width: 1200px;
+        &--node {
+            width: 140px;
+            margin-left: 140px;
+        }
     }
 }

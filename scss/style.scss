@@ -29,6 +29,7 @@ html, body {
 }
 
 body {
+    height: 100%;
     font-family: $serif;
     color: $color-black;
     letter-spacing: .022em;
@@ -36,14 +37,6 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    @media (min-width: $m) {
-        font-size: 21px;
-    }
-
-    @media (min-width: $xxl) {
-        font-size: 27px;
-    }
 }
 
 a {
@@ -61,61 +54,48 @@ h3, h2 {
     margin: 0;
 }
 
-h3 {
-    font-size: 32px;
-}
+h2 {
+    font-size: 28px;
 
-.wrapper {
-    max-width: 75%;
-    margin: 8vw auto;
-
-    &--project {
-        max-width: 85%;
-    }
-
-    @media (min-width: $s) {
-        max-width: 45%;
+    @media (min-width: $m) {
+        font-size: 36px;
     }
 
     @media (min-width: $m) {
-        max-width: 68%;
-        margin: 4vw auto;
+        font-size: 48px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+
+    @media (min-width: $m) {
+        font-size: 32px;
     }
 
     @media (min-width: $l) {
-        max-width: 68%;
-    }
-
-    @media (min-width: $xxl) {
-        max-width: 50%;
+        font-size: 38px;
     }
 }
 
-.header {
-    padding: 0 1rem;
+.wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 40px 20px;
 
-    @media (min-width: 1200px) {
+    @media (min-width: $s) {
+        max-width: 72%;
+        margin: 40px auto 0;
         padding: 0;
     }
-}
 
-.button,
-button {
-    background-color: $color-teal;
-    color: white;
-    padding: 16px 22px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    letter-spacing: .015em;
-    text-decoration: none;
-
-    &:focus {
-        outline: none;
+    @media (min-width: $m) {
+        max-width: 920px;
     }
 
-    &:hover {
-        cursor: pointer;
+    @media (min-width: $l) {
+        margin-top: 120px;
+        max-width: 1200px;
     }
 }
 
@@ -125,23 +105,9 @@ button {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1200px;
-    z-index: 5;
-
-    &--polar {
-        background: $polar-blue;
-
-        .menu-link {
-            color: white;
-        }
-    }
 
     @media (min-width: $s) {
         justify-content: flex-end;
-    }
-
-    @media (min-width: $xl) {
-        max-width: none;
     }
 }
 
@@ -152,29 +118,32 @@ button {
 }
 
 .menu-item {
-    display: inline;
-    padding: 2px;
+    display: inline-block;
 
     & + & {
-        margin-left: 30px;
+        margin-left: 25px;
     }
 
-    .about-page & ~ hr {
-        margin-left: 148px;
+    .about-page & ~ .menu-underline {
+        margin-left: 115px;
 
-        @media (min-width: $m) {
-            margin-left: 130px;
+        @media (min-width: $s) {
+            margin-left: 124px;
         }
 
-        @media (min-width: $xl) {
-            margin-left: 144px;
+        @media (min-width: $m) {
+            margin-left: 124px;
+        }
+
+        @media (min-width: $l) {
+            margin-left: 132px;
         }
     }
 }
 
 .menu-underline {
     height: 3px;
-    width: 58px;
+    width: 51px;
     margin-top: 0;
     margin-left: 11px;
     background: $color-black;
@@ -182,12 +151,12 @@ button {
     transition: margin-left 325ms ease-in-out;
     border-radius: 2px;
 
-    @media (min-width: $m) {
-        width: 58px;
+    @media (min-width: $l) {
+        width: 67px;
     }
 
-    @media (min-width: $xl) {
-        width: 68px;
+    @media (min-width: $l) {
+        width: 67px;
     }
 }
 
@@ -196,134 +165,114 @@ button {
     text-align: center;
     padding: 15px 15px 8px;
 
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: .02em;
 
-    @media (min-width: 1400px) {
+    @media (min-width: $s) {
+        font-size: 24px;
+    }
+
+    @media (min-width: $l) {
         font-size: 28px;
     }
 }
 
-.bio-text {
-    margin-top: 110px;
-    max-width: 600px;
-    font-size: 28px;
-    line-height: 1.375;
+.bio {
+    margin-top: 60px;
+    font-size: 16px;
     text-align: center;
 
-    &--polar {
-        color: white;
-    }
-
-    @media (min-width: $xxs) {
-        font-size: 22px;
+    @media (min-width: $xs) {
+        font-size: 20px;
     }
 
     @media (min-width: $s) {
-        max-width: 800px;
+        margin-top: 110px;
         font-size: 30px;
         text-align: left;
     }
 
-    @media (min-width: $l) {
-        max-width: 800px;
+    @media (min-width: $m) {
         font-size: 32px;
     }
 
-    @media (min-width: $xl) {
-        max-width: 920px;
-        font-size: 38px;
-    }
-
-    @media (min-width: $xxl) {
-        max-width: 920px;
+    @media (min-width: $l) {
         font-size: 42px;
     }
 }
 
 .about {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin: 40px auto;
 
-    margin-top: 120px;
-
-    @media (min-width: $m) {
-        margin-top: 35px;
+    @media (min-width: $s) {
+        flex-direction: row;
+        align-items: center;
+        width: 700px;
+        margin-top: 40px;
     }
 
-    @media (min-width: $xxl) {
-        margin-top: 100px;
+    @media (min-width: $m) {
+    }
+
+    @media (min-width: $l) {
+        width: 920px;
+        margin-top: 80px;
     }
 }
 
 .about-img {
-    width: 280px;
-    margin-right: 60px;
+    margin-bottom: 40px;
 
-    @media (min-width: $m) {
-        width: 250px;
+    @media (min-width: $s) {
+        width: 270px;
         margin-right: 40px;
+        margin-bottom: 0;
     }
 
-    @media (min-width: $xl) {
-        width: 360px;
+    @media (min-width: $m) {
+    }
+
+    @media (min-width: $l) {
+        width: 400px;
     }
 }
 
 .about-text {
-    font-size: 32px;
-    line-height: 1.375;
+    font-size: 20px;
 
-    &--polar {
-        color: white;
+    @media (min-width: $s) {
+        font-size: 24px;
     }
 
-    @media (min-width: $xl) {
-        font-size: 32px;
+    @media (min-width: $m) {
+        font-size: 24px;
+    }
+
+    @media (min-width: $l) {
+        font-size: 30px;
     }
 }
 
 .about-paragraph {
-    font-size: 18px;
     margin: 0;
-
-    @media (min-width: $xs) {
-        font-size: 18px;
-    }
-
-    @media (min-width: $m) {
-        font-size: 22px;
-    }
-
-    @media (min-width: $l) {
-        font-size: 32px;
-    }
 
     & + & {
         margin-top: 1em;
     }
 }
 
-.about-link {
-    font-weight: 700;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
 .project {
     width: 100%;
-    height: 300px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:first-of-type {
-        margin-top: 160px;
-    }
+    margin: 60px auto 0;
 
     &--gg {
         background-color: #bcf5e4;
@@ -334,27 +283,22 @@ button {
     }
 
     &--polar {
-        background-color: #c0e4ff;
+        background-color: #d8eeff;
     }
 
-    & + & {
+    @media (min-width: $s) {
+        height: 320px;
         margin-top: 80px;
     }
 
     @media (min-width: $m) {
         height: 400px;
+        margin-top: 120px
     }
 
     @media (min-width: $l) {
         height: 500px;
-
-        & + & {
-            margin-top: 160px;
-        }
-    }
-
-    @media (min-width: $xxl) {
-        height: 600px;
+        margin-top: 160px;
     }
 }
 
@@ -367,10 +311,22 @@ button {
 }
 
 .project-logo {
-    width: 260px;
+    width: 200px;
 
     &--polar {
-        width: 230px;
+        width: 160px;
+    }
+
+    &--gg {
+        width: 180px;
+    }
+
+    @media (min-width: $s) {
+        width: 300px;
+
+        &--polar {
+            width: 220px;
+        }
     }
 
     @media (min-width: $m) {
@@ -381,7 +337,7 @@ button {
         }
     }
 
-    @media (min-width: $xl) {
+    @media (min-width: $l) {
         width: 450px;
 
         &--polar {
@@ -394,39 +350,70 @@ button {
     }
 }
 
-.column {
-    width: 400px;
+.row {
+    margin-top: 80px;
+    padding: 30px;
 
-    & + & {
-        margin-left: 60px;
+    &--noPadding {
+        padding: 0;
     }
+
+    &--text {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $s) {
+        margin-top: 200px;
+        padding: 0;
+    }
+
+    @media (min-width: $l) {
+        margin-top: 300px;
+    }
+}
+
+.columns {
+    @media (min-width: $s) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.column {
+    & + & {
+        margin-top: 110px;
+    }
+
+    @media (min-width: $s) {
+        width: 520px;
+
+        & + & {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+    }
+
+    @media (min-width: $l) {
+        width: 680px;
+
+        & + & {
+            margin-top: 0;
+            margin-left: 60px;
+        }
+    }
+}
+
+.text {
+    font-size: 18px;
 
     @media (min-width: $m) {
-        width: 360px;
-
-        &--polar {
-            width: 510px;
-        }
-
-        &--spinnup {
-            width: 480px;
-
-            & + & {
-                margin-left: 40px;
-            }
-        }
+        font-size: 22px;
     }
 
-    @media (min-width: $xl) {
-        width: 500px;
-    }
-
-    @media (min-width: $xxl) {
-        width: 530px;
-
-        &--spinnup {
-            width: 620px;
-        }
+    @media (min-width: $l) {
+        font-size: 28px;
     }
 }
 
@@ -436,16 +423,10 @@ button {
     &--spinnup {
         color: $spinnup-pink;
     }
-}
 
-.text {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.video {
-    width: 600px;
-    margin: 0 auto;
+    &--polar {
+        color: $polar-blueDark;
+    }
 }
 
 .bullet {
@@ -456,31 +437,63 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 4vw auto;
+    margin: 60px auto;
+
+    .about-page & {
+        margin: 40px auto 80px;
+    }
+
+    @media (min-width: $s) {
+        margin: 80px auto;
+    }
 
     @media (min-width: $m) {
-        margin: 6vw auto;
+        margin: 110px auto 80px;
+
+        .about-page & {
+            margin: 60px auto;
+        }
+    }
+
+    @media (min-width: $l) {
+        margin: 110px auto;
+
+        .about-page & {
+            margin: 100px auto;
+        }
     }
 }
 
 .footer-project {
+    margin-top: 120px;
+
     > * + * {
-        margin-left: 320px;
+        margin-left: 15px;
+    }
+
+    @media (min-width: $m) {
+        > * + * {
+            margin-left: 320px;
+        }
+    }
+
+    @media (min-width: $l) {
+        margin: 260px 0 200px;
     }
 }
 
 .footer-img {
-    max-width: 32px;
+    max-width: 40px;
+
+    @media (min-width: $s) {
+        max-width: 44px;
+    }
 
     @media (min-width: $m) {
-        max-width: 38px;
+        max-width: 48px;
     }
 
-    @media (min-width: $xl) {
-        max-width: 50px;
-    }
-
-    @media (min-width: $xxl) {
+    @media (min-width: $l) {
         max-width: 64px;
     }
 
@@ -491,7 +504,13 @@ footer {
 
 .footer-link {
     & + & {
-        margin-left: 52px;
+        margin-left: 30px;
+    }
+
+    @media (min-width: $m) {
+        & + & {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -499,12 +518,30 @@ footer {
     display: flex;
     align-items: center;
     font-family: $sans-serif;
-    font-size: 24px;
+    font-size: 16px;
+
+    @media (min-width: $m) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $l) {
+        font-size: 24px;
+    }
 }
 
 .arrowLink-arrow {
-    font-size: 32px;
-    padding: 0 15px;
+    font-size: 22px;
+    padding: 0 10px;
+
+    @media (min-width: $m) {
+        font-size: 26px;
+        padding: 0 12px;
+    }
+
+    @media (min-width: $l) {
+        font-size: 28px;
+        padding: 0 15px;
+    }
 }
 
 .fadeUp {
@@ -515,7 +552,7 @@ footer {
 @keyframes fadeUp {
     0% {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(12px);
     }
 
     100% {

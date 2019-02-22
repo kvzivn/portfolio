@@ -27,7 +27,7 @@ $spinnup-grey: #f0f0f0;
 
 .colors {
     display: none;
-    margin-top: 50px;
+
 
     @media (min-width: $m) {
         display: flex;
@@ -39,15 +39,12 @@ $spinnup-grey: #f0f0f0;
         margin-top: 8px;
     }
 
-    @media (min-width: $xl) {
-        margin-top: 8px;
-    }
-
     &--mobile {
         display: flex;
         justify-content: center;
+        margin-top: 40px;
 
-        @media (min-width: 1000px) {
+        @media (min-width: $m) {
             display: none;
         }
     }
