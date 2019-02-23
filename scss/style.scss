@@ -368,6 +368,12 @@ h3 {
         padding: 0;
     }
 
+    @media (min-width: $m) {
+        &--text {
+            max-width: 700px;
+        }
+    }
+
     @media (min-width: $l) {
         margin-top: 300px;
     }
