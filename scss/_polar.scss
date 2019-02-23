@@ -17,6 +17,10 @@
     margin: 0 auto;
     max-width: 1000px;
 
+    @media (min-width: $m) {
+        padding: 60px 0;
+    }
+
     @media (min-width: $l) {
         max-width: 1200px;
         padding: 160px 0;
@@ -67,11 +71,11 @@
         width: 50px;
     }
 
-    @media (min-width: $l) {
-        width: 320px;
+    @media (min-width: $m) {
+        width: 300px;
 
         &--js {
-            width: 100px;
+            width: 90px;
         }
     }
 }
