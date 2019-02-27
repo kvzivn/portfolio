@@ -1,18 +1,25 @@
 .intro {
     font-family: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
     text-align: center;
-    max-width: 85%;
+    width: 85%;
     margin: 60px auto 120px;
 
     @media (min-width: $m) {
-        max-width: 90%;
+        width: 1120px;
         margin: 60px auto 380px;
         text-align: left;
     }
 
     @media (min-width: $l) {
-        max-width: 60%;
-        margin-top: 150px;
+        width: 1400px;
+        height: 100vh;
+        margin: 150px auto -150px;
+        // margin-top: 150px;
+        // margin-bottom: 520px;
+    }
+
+    @media (min-width: $xl) {
+        width: 1520px;
     }
 }
 

@@ -24,7 +24,7 @@
 
         <section class="project project--polar">
             <a class="project-link" href="/polar.html">
-                <img class="project-logo project-logo--polar" src="/img/polar/polar_logo.png" alt="polar">
+                <img class="project-logo project-logo--polar" src="/img/polar/polar_logo.svg" alt="polar">
             </a>
         </section>
     `
