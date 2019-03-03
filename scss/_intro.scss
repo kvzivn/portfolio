@@ -68,8 +68,12 @@
     @media (min-width: $xl) {
         font-size: 82px;
 
+        &--spinnup {
+            font-size: 80px;
+        }
+
         &--vui {
-            font-size: 60px;
+            font-size: 58px;
         }
     }
 }

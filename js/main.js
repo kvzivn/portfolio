@@ -45,7 +45,7 @@
                 </p>
                 </p>
                 <p class="about-paragraph">
-                    You can download my resume <a class="link" href="#">here.</a>
+                    You can download my resume <a class="link" target="_blank" href="http://kevinivan.com/documents/kevin_ivan_cv.pdf">here.</a>
                 </p>
             </div>
         </section>
@@ -57,13 +57,27 @@
         workLink.addEventListener('click', (e) => {
             e.preventDefault()
 
-            mainContent.innerHTML = workPage
-            mainContent.classList.toggle('fadeUp')
-            footer.classList.toggle('fadeUp')
-
-            if (body.classList.contains('about-page')) {
-                body.classList.remove('about-page')
+            if (mainContent.classList.contains('slideRight')) {
+                mainContent.classList.remove('slideRight')
+                footer.classList.remove('slideRight')
             }
+
+            mainContent.classList.add('fadeOut')
+            footer.classList.add('fadeOut')
+
+            setTimeout(() => {
+                if (body.classList.contains('about-page')) {
+                    body.classList.remove('about-page')
+                }
+
+                mainContent.classList.remove('slideRight')
+                footer.classList.remove('slideRight')
+                mainContent.classList.add('slideLeft')
+                footer.classList.add('slideLeft')
+                mainContent.innerHTML = workPage
+                mainContent.classList.remove('fadeOut')
+                footer.classList.remove('fadeOut')
+            }, 350)
         })
     }
 
@@ -71,10 +85,22 @@
         aboutLink.addEventListener('click', (e) => {
             e.preventDefault()
 
-            body.classList.add('about-page')
-            mainContent.innerHTML = aboutPage
-            mainContent.classList.toggle('fadeUp')
-            footer.classList.toggle('fadeUp')
+            if (mainContent.classList.contains('slideLeft')) {
+                mainContent.classList.remove('slideLeft')
+                footer.classList.remove('slideLeft')
+            }
+
+            mainContent.classList.add('fadeOut')
+            footer.classList.add('fadeOut')
+
+            setTimeout(() => {
+                body.classList.add('about-page')
+                mainContent.classList.add('slideRight')
+                footer.classList.add('slideRight')
+                mainContent.innerHTML = aboutPage
+                mainContent.classList.remove('fadeOut')
+                footer.classList.remove('fadeOut')
+            }, 350)
         })
     }
 }())
