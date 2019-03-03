@@ -2,12 +2,30 @@
 <html lang="en">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135538355-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135538355-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Hotjar Tracking Code for www.kevinivan.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1221540, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
     <title>Kevin Ivan - Voice User Interface</title>
 </head>
 
@@ -64,21 +82,21 @@
     </div>
 
     <section class="section">
-        <h3>Introduction</h2>
+        <h3>Introduction</h3>
         <p class="text">
             Voice technology is quickly seeping into our daily lives and Grocery Gateway is not late to explore the opportunities that come with it. By collaborating with my UX design program, their UX team knew they would get a lot of insight into how this new technology could impact their business while giving us students a great opportunity to explore the new and exciting world of voice user interfaces.
         </p>
     </section>
 
     <section class="section">
-        <h3>The Challenge</h2>
+        <h3>The Challenge</h3>
         <p class="text">
             Our voices are diverse and complex. We have accents, use local slang, and sometimes the sentence that leaves our mouth doesn’t quite reflect the thought behind it. This project was aimed at exploring solutions that would give us insights into what kind of language people use when managing and ordering groceries online, and whether the voice component could enhance or facilitate the process in any way.
         </p>
     </section>
 
     <section class="section">
-        <h3>Research</h2>
+        <h3>Research</h3>
         <p class="text">
             To create as much value as possible for our industry partner, we decided to place ourselves on a more exploratory path where we focused on research and solutions that generated feedback which would lead to a better understanding of the challenges that come with VUI’s, and how to potentially solve them.
         </p>
@@ -103,31 +121,30 @@
     </section>
 
     <section class="section">
-        <h3>Customer Journey Map</h2>
+        <h3>Customer Journey Map</h3>
         <p class="text">
-            To get a better understanding of the new customer journey from start to finish, and which parts of it we should focus on, we sketched out a quick map over the different scenarios a customer could potentially go through when ordering from the Grocery Gateway website.
+            To get a better understanding of the new customer journey from start to finish, and which parts of it we should focus on, we sketched out a map over different scenarios a customer could potentially go through when ordering from the Grocery Gateway website.
         </p>
         <img src="/img/vui/map.jpg" alt="whiteboard drawing of the current customer journey on grocery gateway.">
     </section>
 
     <section class="section">
-        <h3>Affinity Map</h2>
+        <h3>Affinity Map</h3>
         <p class="text">
             After deciding on which parts of the customer journey we wanted to focus on, we started writing down ideas and potential solutions on post-it notes.
         </p>
         <img src="/img/vui/hmw2.jpg" alt="post-it notes.">
+        <img src="/img/vui/hmw3.jpg" alt="post-it notes.">
         <p class="text">
-            To better frame our thinking, we used the "How Might We" methodology from the Google Ventures <a class="link link--vui" target="_blank" href="https://www.gv.com/sprint/">design sprint</a> process. With the help of sticky dots, each team member voted on the ideas they thought were worth pursuing. Having taken on the role as the “Decider” (and being armed with three sticky dots instead of one), I had the final say in which direction we should be going next.
+            To better frame our thinking, we used the "How Might We" methodology from the Google Ventures <a class="link link--vui" target="_blank" href="https://www.gv.com/sprint/">design sprint</a> process. With the help of sticky dots, each team member voted on the ideas they thought were worth pursuing. Having taken on the role as the design sprint “Decider” (and being armed with three sticky dots instead of one), I had the final say in which direction we should be going next.
         </p>
-        <!-- <img src="/img/vui/hmw3.jpg" alt="post-it notes."> -->
     </section>
 
     <section class="section">
-        <h3>Sketching</h2>
+        <h3>Sketching</h3>
         <p class="text">
             After our voting session it was clear which areas we wanted to focus on. We started sketching out our own ideas around different scenarios and then hung up our sketches on a wall for all group members to view.
         </p>
-        <!-- <img src="/img/vui/sketches1.jpg" alt="sketching with pen and paper."> -->
         <img src="/img/vui/sketches.jpg" alt="pen and paper sketches.">
         <img src="/img/vui/sketches2.jpg" alt="pen and paper sketches.">
         <p class="text">
@@ -141,7 +158,7 @@
     </section>
 
     <section class="section">
-        <h3>Storyboarding</h2>
+        <h3>Storyboarding</h3>
         <p class="text">
             We dove a little deeper into our sketches above by drawing a storyboard which also explores a recipe requesting scenario.
         </p>
@@ -149,7 +166,7 @@
     </section>
 
     <section class="section">
-        <h3>Prototyping</h2>
+        <h3>Prototyping</h3>
         <p class="text">
             At this stage we had a pretty good understanding of what we wanted to prototype, and why. Our goal was to find out how people use their voice and what kind of language they would use when, for example, adding items to their cart, modifying items (choosing an organic alternative, changing the quantity), or how they might respond when an item would be out of stock. To validate the assumptions we had made throughout the project so far, we created two prototypes.
         </p>
@@ -182,15 +199,14 @@
     </section>
 
     <section class="section">
-        <h3>Usability Testing</h2>
+        <h3>Usability Testing</h3>
         <p class="text">
-            From concluding the data we received from our usability testing, we gained a lot of insight and a much better understanding of how people expect a service like this to work, and what kind of language they would use when interacting with it. The moderator script for our user interviews along with our scenarios can be found <a class="link link--vui" href="https://docs.google.com/document/d/1y1WsAWRGlFYQhfMPVFA3r9M3TYgZ17t9TAKryhvECBw/edit?usp=sharing"
-                target="_blank">here.</a>
+            From concluding the data we received from our usability testing, we gained a lot of insight and a much better understanding of how people expect a service like this to work, and what kind of language they would use when interacting with it. The moderator script for our user interviews along with our scenarios can be found <a class="link link--vui" href="https://docs.google.com/document/d/1y1WsAWRGlFYQhfMPVFA3r9M3TYgZ17t9TAKryhvECBw/edit?usp=sharing" target="_blank">here.</a>
         </p>
     </section>
 
     <section class="section">
-        <h3>Key Findings</h2>
+        <h3>Key Findings</h3>
         <blockquote>I’d like to be able to say 5 items at once, instead of just one at a time.</blockquote>
         <p class="text">
             All participants wanted to be able to order their groceries in one speaking instance, rather than list one item at a time.
@@ -206,7 +222,7 @@
     </section>
 
     <section class="section">
-        <h3>Quotes</h2>
+        <h3>Quotes</h3>
         <p class="text">
             Since the main goal of our usability testing was to see how people use their own natural language, here’s a few examples of how our participants talked to the prototype. It was interesting to see how everyone had their own unique way of saying things.
         </p>
@@ -214,7 +230,7 @@
     </section>
 
     <section class="section">
-        <h3>Wrapping Up</h2>
+        <h3>Wrapping Up</h3>
         <p class="text">
             In this project my team and I went through the entire UX lifecycle which involved everything from ideation, research, and the creation of multiple interactive prototypes. Our main goal was to help Grocery Gateway get a better understanding of VUI’s, what kind of challenges lie ahead, and how they might approach these challenges when designing their own customer facing VUI.
         </p>
@@ -236,8 +252,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init()</script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
