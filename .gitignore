@@ -1,4 +1,5 @@
 .DS_Store
-*.sketch
+.cache/
 node_modules/
 css/
+dist/

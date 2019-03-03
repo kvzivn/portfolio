@@ -1,11 +1,10 @@
 @import '_mediaqueries.scss';
 @import '_colors.scss';
 @import '_typography.scss';
-@import '_polar.scss';
 @import '_intro.scss';
 @import '_browser.scss';
+@import '_polar.scss';
 @import '_spinnup.scss';
-@import '_gg.scss';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 @font-face {
@@ -554,18 +553,20 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px auto;
+    margin: 60px auto 0;
+    padding-bottom: 60px;
 
     .about-page & {
         margin: 40px auto 80px;
     }
 
     @media (min-width: $s) {
-        margin: 80px auto;
+        margin: 80px auto 0;
+        padding-bottom: 80px;
     }
 
     @media (min-width: $m) {
-        margin: 110px auto 80px;
+        margin: 110px auto 0;
 
         .about-page & {
             margin: 60px auto;
@@ -573,7 +574,7 @@ footer {
     }
 
     @media (min-width: $l) {
-        margin: 110px auto;
+        margin: 110px auto 0;
 
         .about-page & {
             margin: 100px auto;

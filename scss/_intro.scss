@@ -1,5 +1,5 @@
 .intro {
-    font-family: 'Proxima Nova', 'Open Sans', Helvetica, sans-serif;
+    font-family: $sans-serif;
     text-align: center;
     width: 85%;
     margin: 60px auto 120px;
@@ -14,8 +14,6 @@
         width: 1400px;
         height: 100vh;
         margin: 150px auto -150px;
-        // margin-top: 150px;
-        // margin-bottom: 520px;
     }
 
     @media (min-width: $xl) {
@@ -162,10 +160,6 @@
 
     &--polar {
         color: white;
-    }
-
-    .spinnup & {
-        // color: #d65d89;
     }
 
     .polar & {

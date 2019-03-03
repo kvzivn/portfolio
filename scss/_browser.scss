@@ -1,5 +1,3 @@
-// @import '_typography.scss';
-
 .browser {
     position: relative;
     display: flex;
@@ -66,30 +64,6 @@
 
     &--zoom {
         background: #03d54e;
-    }
-}
-
-.browser-content {
-    &--signup,
-    &--products {
-        background: url('/img/signup_bg2.jpeg') no-repeat center center;
-        background-size: cover;
-    }
-
-    &--products {
-        overflow: hidden;
-    }
-
-    &--travelers {
-        padding-top: 140px;
-        background: url('/img/signup_bg2.jpeg') no-repeat center center;
-        background-size: cover;
-    }
-
-    &--shipify {
-        display: flex;
-        align-items: center;
-        height: auto;
     }
 }
 
