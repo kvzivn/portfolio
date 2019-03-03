@@ -71,6 +71,10 @@ h3 {
 
     @media (min-width: $m) {
         font-size: 32px;
+
+        + p {
+            margin-top: 10px;
+        }
     }
 
     @media (min-width: $l) {
@@ -87,6 +91,10 @@ h4 {
 
     @media (min-width: $m) {
         font-size: 22px;
+
+        + p {
+            margin-top: 8px;
+        }
     }
 
     @media (min-width: $l) {
@@ -104,6 +112,41 @@ ol {
 
     li {
         margin-top: 6px;
+    }
+}
+
+blockquote {
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 18px;
+
+    @media (min-width: $s) {
+        font-size: 30px;
+        margin: 80px 40px;
+    }
+
+    &:before {
+        font-family: $sans-serif;
+        content: open-quote;
+        position: relative;
+        display: inline;
+        line-height: 0;
+        left: -6px;
+        top: 30px;
+        color: $gg-greenLight;
+        font-size: 3em;
+    }
+
+    &:after {
+        content: close-quote;
+        font-family: $sans-serif;
+        position: relative;
+        display: inline;
+        line-height: 0;
+        left: 6px;
+        top: 30px;
+        color: $gg-greenLight;
+        font-size: 3em;
     }
 }
 
@@ -172,17 +215,16 @@ ol {
 
 .menu-underline {
     height: 3px;
-    width: 57px;
+    width: 50px;
     margin-top: 0;
     margin-left: 11px;
     background: $color-black;
     border: none;
     transition: margin-left 500ms ease-out;
-    // transition-delay: 200ms;
     border-radius: 2px;
 
-    @media (min-width: $l) {
-        width: 67px;
+    @media (min-width: $m) {
+        width: 57px;
     }
 
     @media (min-width: $l) {
@@ -218,7 +260,7 @@ ol {
     }
 
     @media (min-width: $s) {
-        margin-top: 110px;
+        margin-top: 90px;
         font-size: 30px;
         text-align: left;
     }
@@ -270,7 +312,7 @@ ol {
 }
 
 .about-text {
-    font-size: 20px;
+    font-size: 18px;
 
     @media (min-width: $m) {
         font-size: 21px;
@@ -374,10 +416,22 @@ ol {
 }
 
 .section {
-    margin: 80px auto 0;
+    margin: 40px auto 0;
+    padding: 0 30px;
+
+    @media (min-width: $s) {
+        max-width: 680px;
+        margin-top: 60px;
+        padding: 0;
+
+        &:first-of-type {
+            margin-top: 200px;
+        }
+    }
 
     @media (min-width: $l) {
         max-width: 820px;
+        margin-top: 80px;
 
         &:first-of-type {
             margin-top: 300px;
@@ -387,18 +441,20 @@ ol {
 
 .row {
     margin-top: 80px;
-
-    &--noPadding {
-        padding: 0;
-    }
+    padding: 0 30px;
 
     &--text {
         max-width: 900px;
         margin: 0 auto;
     }
 
+    &--noPadding {
+        padding: 0;
+    }
+
     @media (min-width: $s) {
         margin-top: 120px;
+        padding: 0;
     }
 
     @media (min-width: $m) {
@@ -426,7 +482,7 @@ ol {
 
 .column {
     & + & {
-        margin-top: 110px;
+        margin-top: 80px;
     }
 
     @media (min-width: $s) {
@@ -453,10 +509,24 @@ ol {
 
     @media (min-width: $m) {
         font-size: 22px;
+
+        &--item {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 12px;
+            font-size: 24px;
+        }
     }
 
     @media (min-width: $l) {
         font-size: 28px;
+
+        &--item {
+            max-width: 560px;
+            padding-top: 14px;
+            font-size: 30px;
+        }
     }
 }
 
@@ -567,7 +637,6 @@ footer {
     font-family: $sans-serif;
     font-size: 16px;
     font-weight: 600;
-    opacity: .9;
 
     @media (min-width: $m) {
         font-size: 20px;
@@ -580,7 +649,7 @@ footer {
 
 .arrowLink-arrow {
     font-size: 22px;
-    padding: 0 10px;
+    padding: 0 10px 0 0;
 
     @media (min-width: $m) {
         font-size: 26px;
@@ -620,7 +689,7 @@ footer {
 @keyframes slideLeft {
     0% {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(50px);
     }
 
     100% {
@@ -633,7 +702,7 @@ footer {
 @keyframes slideRight {
     0% {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-50px);
     }
 
     100% {
