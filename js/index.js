@@ -48,7 +48,7 @@ let aboutPage = `
                 I love to get inside the mind of people, discover their motivations, and use that knowledge to design pleasant and accessible experiences.
             </p>
             <p class="about-paragraph">
-                I'm also into really cool stuff like biohacking, yoga, and naps.
+                I'm also into really cool stuff like biohacking, <a class="link link--secret" href="https://www.facebook.com/photo.php?fbid=10216441657533963&set=a.3109421334463&type=3&theater" target="_blank">yoga</a>, and naps.
             </p>
             <p class="about-paragraph">
                 I can confidently lead ideation sessions, conduct user research, and develop everything from
