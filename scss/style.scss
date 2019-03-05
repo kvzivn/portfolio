@@ -8,7 +8,7 @@
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
 html, body {
-    height: 50%;
+    height: 100%;
 }
 
 body {
@@ -41,11 +41,11 @@ h2 {
     font-size: 28px;
 
     @media (min-width: $m) {
-        font-size: 36px;
+        font-size: 42px;
     }
 
-    @media (min-width: $m) {
-        font-size: 48px;
+    @media (min-width: $l) {
+        font-size: 54px;
     }
 }
 
@@ -281,23 +281,20 @@ blockquote {
     margin-bottom: 40px;
 
     @media (min-width: $s) {
-        width: 270px;
+        min-width: 270px;
         margin-right: 40px;
         margin-bottom: 0;
     }
 
-    @media (min-width: $m) {
-    }
-
     @media (min-width: $l) {
-        width: 400px;
+        min-width: 400px;
     }
 }
 
 .about-text {
     font-size: 18px;
 
-    @media (min-width: $m) {
+    @media (min-width: $s) {
         font-size: 21px;
     }
 
@@ -438,6 +435,10 @@ blockquote {
     @media (min-width: $s) {
         margin-top: 120px;
         padding: 0;
+
+        .polar & {
+            margin-top: 180px;
+        }
     }
 
     @media (min-width: $m) {
@@ -516,6 +517,10 @@ blockquote {
 .link {
     text-decoration: underline;
 
+    &--secret {
+        text-decoration: none;
+    }
+
     &--spinnup {
         color: $spinnup-pink;
     }
@@ -547,14 +552,14 @@ footer {
     @media (min-width: $s) {
         margin: 80px auto 0;
         padding-bottom: 80px;
-    }
-
-    @media (min-width: $m) {
-        margin: 110px auto 0;
 
         .about-page & {
             margin: 60px auto;
         }
+    }
+
+    @media (min-width: $m) {
+        margin: 110px auto 0;
     }
 
     @media (min-width: $l) {
@@ -588,10 +593,6 @@ footer {
     max-width: 40px;
 
     @media (min-width: $s) {
-        max-width: 44px;
-    }
-
-    @media (min-width: $m) {
         max-width: 48px;
     }
 
