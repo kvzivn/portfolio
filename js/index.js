@@ -1,6 +1,6 @@
 import AOS from 'aos'
 
-AOS.init()
+AOS.init({ disable: 'mobile' })
 
 const body = document.querySelector('body')
 const workLink = document.querySelector('.js-workLink')
