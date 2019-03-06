@@ -92,6 +92,10 @@ if (workLink) {
     workLink.addEventListener('click', (e) => {
         e.preventDefault()
 
+        if (!body.classList.contains('about-page')) {
+            return
+        }
+
         if (mainContent.classList.contains('slideRight')) {
             mainContent.classList.remove('slideRight')
             footer.classList.remove('slideRight')
