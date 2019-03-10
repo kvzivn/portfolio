@@ -12,10 +12,10 @@ const kevin = new Image()
 const ggLogo = new Image()
 
 kevin.classList.add('about-img')
-kevin.src = "http://kevinivan.com/img/kevin.jpg"
+kevin.src = "https://kevinivan.com/img/kevin.jpg"
 kevin.alt = 'Picture of Kevin Ivan.'
 
-ggLogo.src = "http://kevinivan.com/img/gg_logo.png"
+ggLogo.src = "https://kevinivan.com/img/gg_logo.png"
 ggLogo.classList.add('project-logo', 'project-logo--gg')
 ggLogo.alt = 'grocery gateway logo'
 
@@ -30,13 +30,13 @@ let workPage = `
 
     <section class="project project--spinnup">
         <a class="project-link" href="/spinnup.html">
-            <img class="project-logo" src="http://kevinivan.com/img/spinnup_logo.png" alt="spinnup logo.">
+            <img class="project-logo" src="https://kevinivan.com/img/spinnup_logo.png" alt="spinnup logo.">
         </a>
     </section>
 
     <section class="project project--polar">
         <a class="project-link" href="/polar.html">
-            <img class="project-logo project-logo--polar" src="http://kevinivan.com/img/polar_logo.svg" alt="polar logo.">
+            <img class="project-logo project-logo--polar" src="https://kevinivan.com/img/polar_logo.svg" alt="polar logo.">
         </a>
     </section>
 `
@@ -56,7 +56,7 @@ let aboutPage = `
             </p>
             </p>
             <p class="about-paragraph">
-                You can download my resume <a class="link" target="_blank" href="http://kevinivan.com/documents/kevin_ivan_cv.pdf">here.</a>
+                You can download my resume <a class="link" target="_blank" href="https://kevinivan.com/documents/kevin_ivan_cv.pdf">here.</a>
             </p>
         </div>
     </section>

@@ -10,9 +10,9 @@ $blue: #24dac6;
 $black: #37383d;
 $blue-light: #c6e2e9;
 
-$gg-greenDark: #012119;
+$gg-greenDark: #355847;
 $gg-green: #013123;
-$gg-greenLight: #29ae69;
+$gg-greenLight: #69da9f;
 $gg-cream: #f8f5eb;
 
 $polar-blue: #8cb3d2;
@@ -27,7 +27,6 @@ $spinnup-grey: #f0f0f0;
 
 .colors {
     display: none;
-
 
     @media (min-width: $m) {
         display: flex;
@@ -60,6 +59,10 @@ $spinnup-grey: #f0f0f0;
         margin-left: 20px;
     }
 
+    &--hide {
+        display: none;
+    }
+
     @media (min-width: $s) {
         width: 36px;
         height: 36px;
@@ -73,6 +76,10 @@ $spinnup-grey: #f0f0f0;
     @media (min-width: $l) {
         width: 36px;
         height: 36px;
+
+        &--hide {
+            display: inline-block;
+        }
     }
 
     &--teal {

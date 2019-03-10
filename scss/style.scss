@@ -103,9 +103,27 @@ blockquote {
     text-align: center;
     margin: 40px 18px;
 
+    &.big {
+        font-size: 24px;
+    }
+
     @media (min-width: $s) {
         font-size: 30px;
         margin: 80px 40px;
+
+        &.big {
+            font-size: 42px;
+        }
+    }
+
+    @media (min-width: $l) {
+        margin: 80px 40px;
+        font-size: 42px;
+        line-height: 1.5;
+
+        &.big {
+            font-size: 58px;
+        }
     }
 
     &:before {
@@ -126,7 +144,7 @@ blockquote {
         position: relative;
         display: inline;
         line-height: 0;
-        left: 6px;
+        left: 2px;
         top: 30px;
         color: $gg-greenLight;
         font-size: 3em;
@@ -140,7 +158,7 @@ blockquote {
 
     @media (min-width: $s) {
         max-width: 72%;
-        margin: 40px auto 0;
+        margin: 50px auto 0;
         padding: 0;
     }
 
@@ -281,13 +299,13 @@ blockquote {
     margin-bottom: 40px;
 
     @media (min-width: $s) {
-        min-width: 270px;
+        min-width: 254px;
         margin-right: 40px;
         margin-bottom: 0;
     }
 
     @media (min-width: $l) {
-        min-width: 400px;
+        min-width: 366px;
     }
 }
 
@@ -399,6 +417,14 @@ blockquote {
     margin: 40px auto 0;
     padding: 0 30px;
 
+    &--vuiQuote {
+        max-width: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-grey;
+    }
+
     @media (min-width: $s) {
         max-width: 680px;
         margin-top: 60px;
@@ -406,6 +432,34 @@ blockquote {
 
         &:first-of-type {
             margin-top: 200px;
+        }
+
+        &--vuiQuote {
+            max-width: none;
+            padding: 300px 0;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        &--marginTop {
+            margin-top: 300px;
+        }
+    }
+
+    @media (min-width: $m) {
+        &--vuiQuote {
+            max-width: none;
+            padding: 230px 0;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        &--marginTop {
+            margin-top: 230px;
         }
     }
 
@@ -415,6 +469,19 @@ blockquote {
 
         &:first-of-type {
             margin-top: 300px;
+        }
+
+        &--vuiQuote {
+            max-width: none;
+            padding: 400px 0;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        &--marginTop {
+            margin-top: 400px;
         }
     }
 }
@@ -449,6 +516,10 @@ blockquote {
 
     @media (min-width: $l) {
         margin-top: 300px;
+
+        .polar & {
+            margin-top: 300px;
+        }
 
         &:first-of-type {
             margin-top: 0;
@@ -490,6 +561,7 @@ blockquote {
 
 .text {
     font-size: 18px;
+    color: #405453;
 
     @media (min-width: $m) {
         font-size: 22px;
@@ -530,7 +602,7 @@ blockquote {
     }
 
     &--vui {
-        color: $gg-greenLight;
+        color: $gg-greenDark;
     }
 }
 
@@ -554,7 +626,7 @@ footer {
         padding-bottom: 80px;
 
         .about-page & {
-            margin: 60px auto;
+            margin: 50px auto;
         }
     }
 
