@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0 30px 120px;
+    margin-bottom: 100px;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 
     @media (min-width: $m) {
@@ -22,7 +22,7 @@
 .browser-top {
     display: flex;
     align-items: center;
-    height: 32px;
+    height: 26px;
     padding-left: 20px;
     background-color: #d1dcdc;
     border-radius: 10px 10px 0 0;
@@ -41,11 +41,16 @@
 }
 
 .browser-btn {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
 
     .browser--project & {
+        width: 12px;
+        height: 12px;
+    }
+
+    @media (min-width: $m) {
         width: 12px;
         height: 12px;
     }

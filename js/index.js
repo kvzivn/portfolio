@@ -1,4 +1,4 @@
-import AOS from 'aos'
+// import AOS from 'aos'
 
 AOS.init({ disable: 'mobile' })
 
