@@ -5,9 +5,14 @@
     margin-bottom: 100px;
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 
+    @media (min-width: $s) {
+        padding: 0 30px;
+    }
+
     @media (min-width: $m) {
         max-width: 700px;
         margin: 0 auto;
+        padding: 0;
     }
 
     @media (min-width: $l) {
@@ -32,11 +37,11 @@
     }
 
     @media (min-width: $m) {
-        height: 32px;
+        height: 40px;
     }
 
     @media (min-width: $xl) {
-        height: 60px;
+        height: 50px;
     }
 }
 
