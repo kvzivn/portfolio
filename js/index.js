@@ -20,7 +20,7 @@ ggLogo.classList.add('project-logo', 'project-logo--gg')
 ggLogo.alt = 'grocery gateway logo'
 
 let workPage = `
-    <p class="bio js-bio">
+    <p class="bio">
         I’m a UX designer that loves to code.<br>Currently based in Toronto.
     </p>
 
