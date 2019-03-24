@@ -193,10 +193,10 @@ blockquote {
         &:before {
             content: '';
             position: absolute;
-            width: 42px;
+            width: 50px;
             height: 2px;
             top: 100%;
-            left: 15px;
+            left: 10px;
             background: $black;
             border-radius: 2px;
             transition-property: transform, width;
@@ -204,26 +204,26 @@ blockquote {
             transition-timing-function: ease-out;
 
             @media (min-width: $s) {
-                width: 50px;
+                width: 59px;
                 height: 3px;
             }
 
             @media (min-width: $l) {
-                width: 58px;
+                width: 67px;
             }
 
             .about-page & {
                 transform: translateX(86px);
-                width: 49px;
+                width: 58px;
 
                 @media (min-width: $s) {
                     transform: translateX(96px);
-                    width: 57px;
+                    width: 66px;
                 }
 
                 @media (min-width: $l) {
                     transform: translateX(104px);
-                    width: 68px;
+                    width: 78px;
                 }
             }
         }
