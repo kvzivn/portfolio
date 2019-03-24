@@ -3,6 +3,7 @@
 @import '_typography.scss';
 @import '_intro.scss';
 @import '_browser.scss';
+@import '_vui.scss';
 @import '_polar.scss';
 @import '_spinnup.scss';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
@@ -127,51 +128,20 @@ blockquote {
         display: inline;
         line-height: 0;
         left: 1px;
-        top: 4px;
+        top: 6px;
         color: $gg-greenLight;
         font-size: 2em;
-    }
-
-    &.big {
-        font-size: 16px;
-        margin: 80px 0;
-    }
-
-    @media (min-width: $s) {
-        &.big {
-            font-size: 24px;
-        }
     }
 
     @media (min-width: $m) {
         font-size: 30px;
         margin: 80px 40px;
-
-        &.big {
-            font-size: 42px;
-
-            &:before {
-                left: -6px;
-                top: 26px;
-                font-size: 2.5em;
-            }
-
-            &:after {
-                left: 2px;
-                top: 26px;
-                font-size: 2.5em;
-            }
-        }
     }
 
     @media (min-width: $l) {
         margin: 80px 40px;
         font-size: 42px;
         line-height: 1.5;
-
-        &.big {
-            font-size: 58px;
-        }
     }
 }
 
@@ -431,15 +401,6 @@ blockquote {
     margin: 40px auto 0;
     padding: 0 30px;
 
-    &--vuiQuote {
-        max-width: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: $color-grey;
-        padding: 0;
-    }
-
     @media (min-width: $s) {
         max-width: 680px;
         margin-top: 60px;
@@ -449,13 +410,9 @@ blockquote {
             margin-top: 200px;
         }
 
-        &--vuiQuote {
+        &.bigQuote {
             max-width: none;
-            padding: 100px 0;
-
-            &:first-of-type {
-                margin-top: 0;
-            }
+            margin-top: 0;
         }
 
         &--marginTop {
@@ -464,15 +421,6 @@ blockquote {
     }
 
     @media (min-width: $m) {
-        &--vuiQuote {
-            max-width: none;
-            padding: 230px 0;
-
-            &:first-of-type {
-                margin-top: 0;
-            }
-        }
-
         &--marginTop {
             margin-top: 230px;
         }
@@ -486,13 +434,9 @@ blockquote {
             margin-top: 300px;
         }
 
-        &--vuiQuote {
+        &.bigQuote {
             max-width: none;
-            padding: 400px 0;
-
-            &:first-of-type {
-                margin-top: 0;
-            }
+            margin-top: 0;
         }
 
         &--marginTop {
